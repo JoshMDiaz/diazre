@@ -10,8 +10,10 @@ const Header = () => (
         padding: '30px',
       }}
     >
-      <img src={logo} alt="logo" />
-      <span>VR Photography</span>
+      <div className="animated fadeInLeft">
+        <img src={logo} alt="logo" />
+        <span>VR Photography</span>
+      </div>
     </div>
   </header>
 )
