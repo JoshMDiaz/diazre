@@ -10,9 +10,9 @@ const Header = () => (
         padding: '30px',
       }}
     >
-      <div className="animated fadeInLeft">
-        <img src={logo} alt="logo" />
-        <span>VR Photography</span>
+      <div style={{ textAlign: 'center' }}>
+        <img src={logo} alt="logo" className="logo animated fadeInDown" />
+        <h1>Diaz Real Estate, LLC</h1>
       </div>
     </div>
   </header>
