@@ -3,6 +3,9 @@ import React from 'react'
 import Layout from '../components/layout'
 import Box from '../components/box'
 
+// Images
+import centuryHome from '../images/century.jpg';
+
 const goToPricing = () => {
   console.log('pricing');
 }
@@ -10,7 +13,8 @@ const goToPricing = () => {
 const list = [
   {
     name: 'Century',
-    link: '#'
+    link: 'https://players.cupix.com/preview/2OfQikoY?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX3Rva2VuIjoiMTdlY2Y3MmVjZDFmN2Y5NTM1MWMzOWFlZGUzNjI5MWEiLCJpc3MiOiJ3ZWJhcGkuY3VwaXguY29tIiwiaWF0IjoxNTQwMjU4MjAxLCJleHAiOjE1NDAyNzI2NjEsInRva2VuX3R5cGUiOiJhY2Nlc3NfdG9rZW4iLCJzY29wZSI6bnVsbH0.Jt8WxZ7lCz2-P90iqEPnHlNZmH1oRzZI5p9Aa50nM8g&utm_medium=referral&utm_source=editor.cupix.com&utm_campaign=Preview+tour&editor=true',
+    image: centuryHome
   },
   {},
   {},
@@ -36,7 +40,7 @@ const IndexPage = () => (
      <h2>Our Work</h2>
      <div className="list">
       { list.map((e, i) => (
-        <Box name={e.name} key={i} />
+        <Box {...e} key={i} />
       ))}
      </div>
     </div>

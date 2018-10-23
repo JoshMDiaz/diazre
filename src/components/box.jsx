@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'gatsby';
 
 class Box extends Component {
   constructor(props) {
@@ -18,15 +17,20 @@ class Box extends Component {
   }
 
   render() { 
-    const { show } = this.state;
+    const { show } = this.state,
+          { link, image, name } = this.props;
     return (
-      <Link to="#">
-        <div className="box" style={{ background: 'lightgray' }} onMouseEnter={this.showOverlay} onMouseLeave={this.hideOverlay}>
+      <a href={link} target="_blank" rel="noopener noreferrer">
+        <div className="box" style={{
+          background: image ? `url(${image})` : 'lightgray',
+          backgroundSize: 'cover',
+          backgroundPosition: '50% 50%'
+        }} onMouseEnter={this.showOverlay} onMouseLeave={this.hideOverlay}>
           <div className={`overlay ${show ? 'show' : ''}`}>
-            <span className="name">{this.props.name || 'test'}</span>
+            <span className="name">{name || 'test'}</span>
           </div>
         </div>
-      </Link>
+      </a>
     );
   }
 }
