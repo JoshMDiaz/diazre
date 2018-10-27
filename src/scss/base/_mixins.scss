@@ -1,0 +1,7 @@
+@mixin border-radius($radius: 40px) {
+  border-radius: $radius;
+}
+
+@mixin transition($timing: .25s, $property: all, $timing-function: ease-in-out) {
+  transition: $timing $property $timing-function;
+}

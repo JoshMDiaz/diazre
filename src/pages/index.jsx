@@ -31,8 +31,8 @@ const IndexPage = () => (
 
     {/* Section 1 - banner with possible video of VR? Call to action to scroll down to pricing */}
     <div className="banner">
-      things
-      <button onClick={goToPricing}>See Pricing</button>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/1ntRoV97k9o?autoplay=1&amp;" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <button onClick={goToPricing}>Pricing</button>
     </div>
     {/* Section 2 - portfolio examples with short about at the top */}
     <div className="portfolio">
