@@ -1,19 +1,24 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
+import Slide from 'react-reveal/Slide'
 
 const Box = (props) => {
   const { link, image, name, num } = props;
   return (
     <Link to={link} className={`box ${num % 2 ? 'even' : 'odd'}`}>
-      <div className={`home-picture animated ${num % 2 ? 'slideInRight' : 'slideInLeft'}`} style={{
-        background: `url(${image})`,
-        backgroundSize: 'cover',
-        backgroundPosition: '50% 50%'
-      }}></div>
-      <div className={`home-info animated ${num % 2 ? 'slideInLeft' : 'slideInRight'}`}>
-        <span>{name}</span>
-      </div>
+      <Slide left={num % 2 ? false : true} right={num % 2 ? true : false} >
+        <div className={`home-picture`} style={{
+          background: `url(${image})`,
+          backgroundSize: 'cover',
+          backgroundPosition: '50% 50%'
+        }}></div>
+      </Slide>
+      <Slide right={num % 2 ? false : true} left={num % 2 ? true : false} >
+        <div className={`home-info`}>
+          <span>{name}</span>
+        </div>
+      </Slide>
     </Link>
   );
 }
