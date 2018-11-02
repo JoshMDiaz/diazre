@@ -6,7 +6,7 @@ const Footer = () => (
     <div
       style={{
         margin: '0 auto',
-        maxWidth: 1260,
+        maxWidth: 900,
         padding: '30px',
       }}
     >

@@ -30,14 +30,7 @@ const Layout = ({ children }) => (
           <html lang="en" />
         </Helmet>
         <Header />
-        <div
-          style={{
-            margin: '0 auto',
-            maxWidth: 1260,
-            padding: '0px 30px',
-            paddingTop: 0,
-          }}
-        >
+        <div>
           {children}
         </div>
         <Footer />
