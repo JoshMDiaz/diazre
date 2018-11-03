@@ -7,7 +7,7 @@ const Box = (props) => {
   const { link, image, name, num } = props;
   return (
     <Link to={link} className={`box ${num % 2 ? 'even' : 'odd'}`}>
-      <Slide left={num % 2 ? false : true} right={num % 2 ? true : false} >
+      <Slide up >
         <div className={`home-picture`} style={{
           background: `url(${image})`,
           backgroundSize: 'cover',

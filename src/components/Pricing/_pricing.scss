@@ -1,0 +1,33 @@
+.pricing {
+  ul {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-rows: repeat(2, 1fr);
+    margin: 30px 0;
+  }
+  li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    span {
+      font-size: 28px;
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: -10%;
+        left: -10%;
+        height: 30%;
+        width: 110%;
+        background: $ultra-light-primary-color;
+        z-index: -1;
+        @include border-radius(0 0 0 40px);
+      }
+    }
+  }
+  img {
+    width: 50vw;
+    margin-bottom: 30px;
+  }
+}

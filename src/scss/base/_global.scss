@@ -1,9 +1,21 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700,800,900');
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:300');
+@import url('https://fonts.googleapis.com/css?family=Rubik:700');
 @import '~animate.css/animate.min.css';
 
 body {
   font-family: 'Khula', sans-serif;
   color: $text-color;
+  font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
 }
 
 .logo {
@@ -17,6 +29,10 @@ a {
 p {
   font-size: 16px;
   line-height: 26px;
+  @media only screen and (min-width: 768px) {
+    font-size: 24px;
+    line-height: 34px;
+  }
 }
 
 .padding {
@@ -26,56 +42,4 @@ p {
 .max-width {
   max-width: 900px;
   margin: auto;
-}
-
-// Box
-.list {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(4, 1fr);
-  grid-gap: 10px;
-}
-.box {
-  display: grid;
-  grid-template-rows: calc(100vw - 60px) 1fr;
-  .home-info {
-    background: $text-color;
-    color: $white-color;
-    transition: all .5s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 18px;
-    padding: 15px;
-    font-weight: 700;
-    text-transform: uppercase;
-    &:hover {
-      color: $light-primary-color;
-    }
-  }
-  @media only screen and (min-width: 500px) {
-    grid-template-rows: calc(50vw - 30px);
-    grid-gap: 10px;
-    &.odd {
-      grid-template-columns: 60vw calc(40vw - 10px);
-    }
-    &.even {
-      grid-template-columns: calc(40vw - 10px) 60vw;
-      .home-info {
-        grid-column: 1 / 2;
-      }
-      .home-picture {
-        grid-column: 2 / 3;
-        grid-row: 1 / 2;
-      }
-    }
-    .home-info {
-      font-size: 24px;
-    }
-  }
-  @media only screen and (min-width: 768px) {
-    .home-info {
-      font-size: 32px;
-    }
-  }
 }

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="30px" viewBox="0 0 28 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Artboard" stroke="#303030" stroke-width="0.7">
+            <g id="house" transform="translate(1.000000, 0.000000)">
+                <path d="M21.66806,15.47232 L21.66806,27.46032 C21.66806,28.33926 20.88806,29.0551 19.91806,29.0551 L14.52806,29.0551" id="Shape"></path>
+                <path d="M4.32806,15.47232 L4.32806,27.46032 C4.32806,28.33926 5.11806,29.0551 6.08806,29.0551 L11.46806,29.0551" id="Shape"></path>
+                <path d="M4.32806,15.47232 L1.47806,15.47232 C0.44806,15.47232 -0.13194,14.49371 0.49806,13.82318 L12.01806,1.34588 C12.51806,0.81127 13.48806,0.81127 13.97806,1.34588 L17.10806,4.73478" id="Shape"></path>
+                <path d="M6.69918,9.8066 L11.27614,4.84929" id="Shape"></path>
+                <path d="M3.60293,13.16015 L4.88535,11.77115" id="Shape"></path>
+                <path d="M21.66806,9.66407 L25.50806,13.82317 C26.12806,14.4937 25.54806,15.47231 24.52806,15.47231 L21.66806,15.47231" id="Shape"></path>
+                <path d="M21.66806,9.66407 L21.66806,2.65069 C21.66806,2.05265 21.12806,1.56334 20.46806,1.56334 L18.31806,1.56334 C17.64806,1.56334 17.10806,2.05265 17.10806,2.65069 L17.10806,4.73477" id="Shape"></path>
+                <polyline id="Shape" points="11.46806 29.05509 11.46806 21.97509 14.52806 21.97509 14.52806 29.05509"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>
