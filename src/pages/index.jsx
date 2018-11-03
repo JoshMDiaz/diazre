@@ -8,6 +8,7 @@ import Pricing from '../components/Pricing/Pricing';
 
 const IndexPage = () => (
   <Layout>
+    <div className="banner-placeholder"></div>
     <Banner />
     <About />
     <Portfolio />

@@ -12,8 +12,11 @@ const goToPricing = () => {
 
 const Banner = () => {
   return (
-    <div className="banner padding max-width">
-      <button onClick={goToPricing}>Pricing</button>
+    <div className="banner">
+      <img src="http://placehold.it/500x500" alt="temp" className="banner-media" />
+      <div className="banner-content padding max-width">
+        <button onClick={goToPricing}>Pricing</button>
+      </div>
     </div>
   );
 }

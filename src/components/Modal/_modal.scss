@@ -1,0 +1,77 @@
+#modal {
+  #modal-body {
+    overflow: scroll;
+    animation-duration: .25s;
+    background: $white-color;
+    color: $text-color;
+    padding: 0 30px;
+    margin: 0 auto;
+    z-index: 111111;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    &.fade-out {
+      transition: .5s all ease;
+      opacity: 0;
+      top: 100vh;
+    }
+    .modal-header {
+      padding: 40px 0 20px 0;
+      display: flex;
+      justify-content: space-between;
+    }
+    h2 {
+      font-size: 24px;
+    }
+    .close {
+      &.hide-circle {
+        .circle {
+          @include animation(removeDash);
+        }
+      }
+      &.show-circle {
+        .circle {
+          stroke-dashoffset: 0;
+          @include animation(drawDash, .75s);
+        }
+      }
+    }
+    .circle-icon {
+      width: 45px;
+      height: 45px;
+      position: absolute;
+      top: 25px;
+      right: 45px;
+      cursor: pointer;
+      .circle {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        stroke: $primary-color;
+        stroke-width: 2px;
+      }
+    }
+    img.icon {
+      width: 25px;
+    }
+
+    @media only screen and (min-width: 500px) {
+      .modal-content {
+        position: relative;
+        text-align: center;
+      }
+      h2 {
+        font-size: 32px;
+      }
+      .circle-icon {
+        width: 55px;
+        height: 55px;
+      }
+    }
+
+    @media only screen and (min-width: 768px) {
+      padding: 0 60px;
+    }
+  }
+}
