@@ -32,14 +32,6 @@ const list = [
 const Portfolio = () => {
   return (
     <div className="portfolio">
-      <h2 className="padding max-width">About Us</h2>
-      <p className="padding max-width">
-        Diaz Real Estate, LLC specializes in Virtual Reality Photography in real
-        estate. If you are listing a home, you will definitely want to have a
-        virtual tour of your home. Buyers can get a much better feel for the
-        space by touring your home online than by viewing a few pictures. Don't
-        miss this opportunity!
-      </p>
       <div className="list">
         {list.map((e, i) => (
           <Box {...e} key={i} num={i} />

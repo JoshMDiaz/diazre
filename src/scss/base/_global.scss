@@ -16,6 +16,19 @@ h1, h2, h3, h4, h5, h6 {
 h2 {
   font-size: 32px;
   margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -10%;
+    left: -15%;
+    height: 45%;
+    width: 120%;
+    background: $ultra-light-primary-color;
+    z-index: -1;
+    transform: skew(-25deg);
+  }
 }
 
 .logo {

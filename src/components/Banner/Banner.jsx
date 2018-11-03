@@ -1,7 +1,13 @@
 import React from 'react'
-
+import Scroll from 'react-scroll'
+const scroller = Scroll.scroller;
+ 
 const goToPricing = () => {
-  console.log('pricing');
+  scroller.scrollTo('pricingSection', {
+    duration: 1000,
+    delay: 50,
+    smooth: true
+  })
 }
 
 const Banner = () => {

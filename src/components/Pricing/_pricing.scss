@@ -1,7 +1,6 @@
 .pricing {
   ul {
     display: grid;
-    grid-gap: 30px;
     grid-template-rows: repeat(2, 1fr);
     margin: 30px 0;
   }
@@ -10,20 +9,30 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+    padding: 50px;
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      top: 0;
+      right: 50%;
+      background: $ultra-light-primary-color;
+      z-index: -1;
+    }
+    &:nth-child(odd) {
+      &::before {
+        transform: skew(-25deg);
+      }
+    }
+    &:nth-child(even) {
+      &::before {
+        transform: skew(25deg);
+      }
+    }
     span {
       font-size: 28px;
-      position: relative;
-      &::before {
-        content: '';
-        position: absolute;
-        bottom: -10%;
-        left: -10%;
-        height: 30%;
-        width: 110%;
-        background: $ultra-light-primary-color;
-        z-index: -1;
-        @include border-radius(0 0 0 40px);
-      }
     }
   }
   img {

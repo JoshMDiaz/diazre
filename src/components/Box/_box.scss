@@ -1,6 +1,7 @@
 .box {
   display: grid;
   grid-template-rows: calc(100vw - 60px) 1fr;
+  overflow: hidden;
   .home-info {
     background: $text-color;
     color: $white-color;

@@ -1,7 +1,7 @@
 $text-color: #222;
 $dark-gray-color: #3b3b3b;
 $white-color: #FFF;
-$primary-color: #983398;
-$light-primary-color: #E464E4;
-$ultra-light-primary-color: #fc8cfc;
-$dark-primary-color: #581E58;
+$primary-color: #51A8D0;
+$light-primary-color: lighten($primary-color, 10%);
+$ultra-light-primary-color: lighten($primary-color, 35%);
+$dark-primary-color: #5B7784;
