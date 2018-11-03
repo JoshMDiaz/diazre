@@ -1,5 +1,6 @@
 import React from 'react'
-import logo from '../../images/logo.svg'
+
+const d = new Date();
 
 const Footer = () => (
   <footer>
@@ -10,8 +11,7 @@ const Footer = () => (
         padding: '30px',
       }}
     >
-      <img src={logo} alt="logo" />
-      <span>VR Photography powered by Diaz Real Estate, LLC</span>
+      <span>VR Photography &bull; © {d.getFullYear()} &bull; Diaz Real Estate, LLC</span>
     </div>
   </footer>
 )

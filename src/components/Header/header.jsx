@@ -1,19 +1,13 @@
 import React from 'react'
 import logo from '../../images/logo.svg'
+import Slide from 'react-reveal/Slide'
 
 const Header = () => (
   <header>
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 1260,
-        padding: '30px',
-      }}
-    >
-      <div style={{ textAlign: 'center' }}>
-        <img src={logo} alt="logo" className="logo animated fadeInDown" />
-        <h1>Diaz Real Estate, LLC</h1>
-      </div>
+    <div className="max-width padding">
+      <Slide down>
+        <img src={logo} alt="logo" className="logo" />
+      </Slide>
     </div>
   </header>
 )

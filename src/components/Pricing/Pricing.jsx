@@ -6,7 +6,6 @@ import RubberBand from 'react-reveal/RubberBand'
 import Scroll from 'react-scroll'
 
 const ScrollElement = Scroll.Element;
- 
 
 const listItems = [
   {
