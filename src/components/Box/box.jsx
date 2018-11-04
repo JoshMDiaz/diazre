@@ -30,7 +30,7 @@ class Box extends Component {
           </Slide>
           <Slide right={num % 2 ? false : true} left={num % 2 ? true : false} >
             <div className={`home-info`}>
-              {name}
+              <h3>{name}</h3>
             </div>
           </Slide>
         </div>

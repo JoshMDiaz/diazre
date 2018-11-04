@@ -27,7 +27,7 @@ const AboutPricing = () => {
         <Slide left>
           <h2>Pricing</h2>
         </Slide>
-        <p className="description">The pricing for interior VR Tours are based on the square footage of the house and the distance travelled to the property. Exterior VR Tours available upon request - price will vary based on the acreage of the are needing to be covered.</p>
+        <p className="description">The pricing for interior VR Tours are based on the square footage of the house and the distance travelled to the property. Exterior VR Tours available upon request - price will vary based on the acreage of the area needing to be covered.</p>
         <ul>
           { listItems.map((e, i) => (
             <Slide key={i} left={i % 2 ? true : false} right={i % 2 ? false : true}>
