@@ -22,6 +22,19 @@
       width: 80px;
     }
   }
+  .lines {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+  }
+  .line {
+    width: 2px;
+    height: 100%;
+    background: $light-gray-color;
+  }
 }
 .banner-placeholder {
   height: calc(100vh - 115px);
