@@ -27,14 +27,14 @@ class Modal extends Component {
     } = this.state,
     {
       tour,
-      name
+      modalTitle
     } = this.props;
     return (
       <div id="modal">
         <Slide up>
           <div id="modal-body" className={closing ? 'fade-out' : ''}>
             <div className="modal-header">
-              <h2 className="modal-name">{name}</h2>
+              <h2 className="modal-name">{modalTitle}</h2>
               <CloseModalButton closeModal={this.closeModal} />
             </div>
             <div className={`modal-content`}>
@@ -51,6 +51,6 @@ export default Modal;
 
 Modal.proptypes = {
   tour: PropTypes.element.isRequired,
-  name: PropTypes.string.isRequired,
+  modalTitle: PropTypes.string.isRequired,
   close: PropTypes.func.isRequired
 };
