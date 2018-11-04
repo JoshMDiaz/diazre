@@ -15,9 +15,16 @@
   .banner-content {
     position: absolute;
     z-index: 100;
-    left: 50%;
+    left: calc(50vw - 70px);
     top: 80vh;
-    transform: translate(-50%, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h3 {
+      font-size: 1.3em;
+      color: $white-color;
+    }
     img {
       width: 80px;
     }
@@ -29,11 +36,12 @@
     top: 0;
     display: flex;
     justify-content: space-around;
+    opacity: .3;
   }
   .line {
     width: 2px;
     height: 100%;
-    background: $light-gray-color;
+    background: linear-gradient(to bottom, $white-color 30%, $light-gray-color 70%);
   }
 }
 .banner-placeholder {

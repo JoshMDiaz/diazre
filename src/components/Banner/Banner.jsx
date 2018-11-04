@@ -1,6 +1,7 @@
 import React from 'react'
 import downArrow from '../../images/down_arrow.svg'
 import Slide from 'react-reveal/Slide'
+import Pulse from 'react-reveal/Pulse'
 
 const Banner = () => {
   return (
@@ -13,9 +14,12 @@ const Banner = () => {
           </Slide>
         ))}
       </div>
-      <div className="banner-content padding max-width">
-        <img src={downArrow} alt="down arrow"/>
-      </div>
+      <Pulse delay={5000} forever>
+        <div className="banner-content padding max-width">
+          <h3>Scroll</h3>
+          <img src={downArrow} alt="down arrow"/>
+        </div>
+      </Pulse>
     </div>
   );
 }
