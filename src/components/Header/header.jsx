@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../../images/logo.svg'
+import logo from '../../images/logo_white.svg'
 import Slide from 'react-reveal/Slide'
 
 const Header = () => (

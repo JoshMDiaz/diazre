@@ -10,10 +10,12 @@ const IndexPage = () => (
   <Layout>
     <div className="banner-placeholder"></div>
     <Banner />
-    <About />
-    <Portfolio />
-    <Pricing />
-    {/* <Testimonials /> */}
+    <div className="site-content">
+      <About />
+      <Portfolio />
+      <Pricing />
+      {/* <Testimonials /> */}
+    </div>
   </Layout>
 )
 

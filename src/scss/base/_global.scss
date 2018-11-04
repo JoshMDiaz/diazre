@@ -17,6 +17,7 @@ h2 {
   margin-bottom: 20px;
   position: relative;
   display: inline-block;
+  z-index: 10;
   &::before {
     content: '';
     position: absolute;
@@ -54,4 +55,8 @@ p {
 .max-width {
   max-width: 900px;
   margin: auto;
+}
+
+.site-content {
+  background: $white-color;
 }
