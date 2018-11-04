@@ -1,8 +1,9 @@
 header {
   height: 115px;
-  position: relative;
-  text-align: center;
-  img {
-    height: 50px;
+  .logo {
+    width: 40px;
+    position: fixed;
+    top: 30px;
+    left: calc(50% - 20px);
   }
 }

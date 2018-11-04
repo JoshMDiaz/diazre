@@ -31,10 +31,6 @@ h2 {
   }
 }
 
-.logo {
-  width: 50px;
-}
-
 a {
   text-decoration: none;
 }
@@ -59,4 +55,6 @@ p {
 
 .site-content {
   background: $white-color;
+  position: relative;
+  z-index: 10;
 }
