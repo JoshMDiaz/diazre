@@ -31,15 +31,15 @@ class Modal extends Component {
     } = this.props;
     return (
       <div id="modal">
-          <div id="modal-body" className={closing ? 'fade-out' : ''}>
-            <div className="modal-header">
-              <h2 className="modal-name">{name}</h2>
-              <CloseModalButton closeModal={this.closeModal} />
-            </div>
-            <div className={`modal-content`}>
-              {tour}
-            </div>
+        <div id="modal-body" className={`animated fadeInUp ${closing ? 'fadeOutDown' : ''}`}>
+          <div className="modal-header">
+            <h2 className="modal-name">{name}</h2>
+            <CloseModalButton closeModal={this.closeModal} />
           </div>
+          <div className={`modal-content`}>
+            {tour}
+          </div>
+        </div>
       </div>
     );
   }
