@@ -38,7 +38,7 @@ class Modal extends Component {
               <CloseModalButton closeModal={this.closeModal} />
             </div>
             <div className={`modal-content`}>
-              {tour}
+              {/* {tour} */}
             </div>
           </div>
         </Slide>
