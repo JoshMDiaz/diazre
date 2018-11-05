@@ -31,7 +31,6 @@ class Modal extends Component {
     } = this.props;
     return (
       <div id="modal">
-        <Slide up>
           <div id="modal-body" className={closing ? 'fade-out' : ''}>
             <div className="modal-header">
               <h2 className="modal-name">{name}</h2>
@@ -41,7 +40,6 @@ class Modal extends Component {
               {tour}
             </div>
           </div>
-        </Slide>
       </div>
     );
   }
