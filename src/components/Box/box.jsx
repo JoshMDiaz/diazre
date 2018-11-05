@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types'
 import Slide from 'react-reveal/Slide'
 import Modal from '../Modal/Modal'
+import {
+  DialogOverlay,
+  DialogContent
+} from "@reach/dialog"
 
 class Box extends Component {
   constructor(props) {
@@ -34,9 +38,11 @@ class Box extends Component {
             </div>
           </Slide>
         </div>
-        { modalOpen &&
-          <Modal close={() => this.toggleModal(false)} {...this.props} />
-        }
+        <DialogOverlay isOpen={modalOpen}>
+          <DialogContent>
+            <Modal close={() => this.toggleModal(false)} {...this.props} />
+          </DialogContent>
+        </DialogOverlay>
       </div>
     );
   }
