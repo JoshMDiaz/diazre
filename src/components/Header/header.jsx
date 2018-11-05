@@ -1,13 +1,13 @@
 import React from 'react'
 import logo from '../../images/logo_white.svg'
-import Slide from 'react-reveal/Slide'
+import Fade from 'react-reveal/Fade'
 
 const Header = () => (
   <header>
     <div className="max-width padding">
-      <Slide down>
+      <Fade delay={2500}>
         <img src={logo} alt="logo" className="logo" />
-      </Slide>
+      </Fade>
     </div>
   </header>
 )
