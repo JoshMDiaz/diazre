@@ -28,6 +28,9 @@ const Layout = ({ children }) => (
           ]}
         >
           <html lang="en" />
+          <script id="mcjs">
+            {`!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/3344b9f1941a28dcd26265a07/e2665b5f160a797bd4928eb48.js");`}
+          </script>
         </Helmet>
         <Header />
         <div>
