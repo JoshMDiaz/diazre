@@ -2,11 +2,15 @@ import React from 'react'
 import downArrow from '../../images/down_arrow.svg'
 import Slide from 'react-reveal/Slide'
 import Pulse from 'react-reveal/Pulse'
+import bannerImg from '../../images/banner.jpg'
 
 const Banner = () => {
   return (
-    <div className="banner">
-      <img src="http://placehold.it/1000x500" alt="test" className="banner-media"/>
+    <div className="banner" style={{
+      backgroundImage: `linear-gradient(0deg, rgba(4, 21, 51, 0.6), rgba(4, 21, 51, 0.7)), url(${bannerImg})`,
+      backgroundPosition: 'center',
+      backgroundSize: 'cover'
+    }}>
       <div className="lines">
         { Array.apply(1, {length: 6}).map((e, i) => (
           <Slide down delay={Number(500 * (i + 1))} key={i}>

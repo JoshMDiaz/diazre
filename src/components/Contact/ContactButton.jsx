@@ -1,33 +1,19 @@
-import React, { Component } from 'react'
-import ContactModal from './ContactModal'
-import {
-  DialogOverlay,
-  DialogContent
-} from "@reach/dialog"
+import React from 'react'
+import Scroll from 'react-scroll'
+const scroller = Scroll.scroller;
+ 
+const goToContact = () => {
+  scroller.scrollTo('contactSection', {
+    duration: 1000,
+    delay: 50,
+    smooth: true
+  })
+}
 
-class ContactButton extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { modalOpen: false }
-  }
-
-  toggleModal = (open) => {
-    this.setState({ modalOpen: open });
-  }
-
-  render() { 
-    const { modalOpen } = this.state;
-    return (
-      <div className="contact-button">
-        <button onClick={() => this.toggleModal(true)}>Contact Us</button>
-        <DialogOverlay isOpen={modalOpen}>
-          <DialogContent>
-            <ContactModal close={() => this.toggleModal(false)} />
-          </DialogContent>
-        </DialogOverlay>
-      </div>
-    );
-  }
+const ContactButton = () => {
+  return (
+    <button onClick={goToContact} className="contact">Contact Us</button>
+  );
 }
  
 export default ContactButton;

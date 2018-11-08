@@ -4,7 +4,6 @@ import houseImg from '../../images/house.svg'
 import Slide from 'react-reveal/Slide'
 import RubberBand from 'react-reveal/RubberBand'
 import Scroll from 'react-scroll'
-import ContactButton from '../Contact/ContactButton';
 
 const ScrollElement = Scroll.Element;
 
@@ -41,7 +40,6 @@ const AboutPricing = () => {
             </Slide>
           ))}
         </ul>
-        <ContactButton />
       </div>
     </ScrollElement>
   );

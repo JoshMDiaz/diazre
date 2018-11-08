@@ -35,7 +35,6 @@ class Modal extends Component {
             <CloseModalButton closeModal={this.closeModal} />
           </div>
           <div className={`modal-content`}>
-          test
             <div id="mc_embed_signup">
               <form action="https://diazre.us19.list-manage.com/subscribe/post?u=3344b9f1941a28dcd26265a07&amp;id=acdfdaf584" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" novalidate>
                 <div id="mc_embed_signup_scroll">
