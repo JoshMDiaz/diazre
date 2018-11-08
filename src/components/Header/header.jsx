@@ -5,7 +5,7 @@ import ContactButton from '../Contact/ContactButton'
 
 const Header = () => (
   <header>
-    <div className="max-width padding">
+    <div className="padding header-container">
       <Fade delay={2500}>
         <img src={logo} alt="logo" className="logo" />
         <ContactButton />
