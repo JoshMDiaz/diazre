@@ -51,7 +51,6 @@ class Box extends Component {
 export default Box;
 
 Box.proptypes = {
-  link: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   name: PropTypes.element.isRequired,
   num: PropTypes.number.isRequired,
