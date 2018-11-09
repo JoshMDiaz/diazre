@@ -1,6 +1,7 @@
 import React from 'react'
 import Box from '../Box/box'
 import centuryHome from '../../images/century.jpg'
+import condo from '../../images/condo.jpg'
 
 const list = [
   {
@@ -10,7 +11,7 @@ const list = [
   },
   {
     name: 'Condo',
-    image: centuryHome,
+    image: condo,
     tour: <iframe title="condo" style={{maxWidth: '100%'}} width="640" height="480" frameBorder="0" allowFullScreen src="https://players.cupix.com/embed.html?key=i17QURUh"></iframe>
   },
   // {
