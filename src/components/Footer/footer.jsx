@@ -1,5 +1,5 @@
 import React from 'react'
-import DemoButton from '../Demo/Demo';
+import InterestedButton from '../Interested/Interested';
 
 const d = new Date();
 
@@ -12,7 +12,7 @@ const Footer = () => (
         padding: '30px',
       }}
     >
-      <DemoButton />
+      <InterestedButton />
       <span>VR Photography &bull; © {d.getFullYear()} &bull; Diaz Real Estate, LLC</span>
     </div>
   </footer>
