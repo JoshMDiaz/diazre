@@ -3,4 +3,8 @@ footer {
   border-top: 1px solid $ultra-light-primary-color;
   color: $dark-gray-color;
   background: $white-color;
+  button {
+    margin: 0 auto 20px auto;
+    display: block;
+  }
 }

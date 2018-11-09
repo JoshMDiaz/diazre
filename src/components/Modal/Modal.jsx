@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import CloseModalButton from './CloseModalButton'
 import PropTypes from 'prop-types'
-import Slide from 'react-reveal/Slide'
 
 class Modal extends Component {
   constructor(props) {
