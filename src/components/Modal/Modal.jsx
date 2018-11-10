@@ -36,9 +36,11 @@ class Modal extends Component {
           <div className="modal-header">
             <h2 className="modal-name">
               {name}
-              <Tooltip tooltipContent={<span>Click on the full screen icon below to make the tour full screen.</span>} position="right" id={'vr-tooltip'}>
-                <img src={infoBubble} alt="info bubble" className="info-bubble" />
-              </Tooltip>
+              <div className="not-mobile">
+                <Tooltip tooltipContent={<span>Click on the full screen icon below to make the tour full screen.</span>} position="right" id={'vr-tooltip'}>
+                  <img src={infoBubble} alt="info bubble" className="info-bubble" />
+                </Tooltip>
+              </div>
             </h2>
             <CloseModalButton closeModal={this.closeModal} />
           </div>
