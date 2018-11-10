@@ -1,7 +1,7 @@
 import React from 'react'
 import Box from '../Box/box'
 import centuryHome from '../../images/century.jpg'
-import condo from '../../images/condo.jpg'
+import condo from '../../images/condo1.jpg'
 
 const list = [
   {

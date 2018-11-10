@@ -61,4 +61,12 @@
       line-height: 42px;
     }
   }
+  @media only screen and (min-width: 1200px) {
+    &.odd {
+      grid-template-columns: 60% calc(40% - 10px);
+    }
+    &.even {
+      grid-template-columns: calc(40% - 10px) 60%;
+    }
+  }
 }

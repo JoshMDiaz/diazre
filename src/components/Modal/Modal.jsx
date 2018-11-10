@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import CloseModalButton from './CloseModalButton'
 import PropTypes from 'prop-types'
+import infoBubble from '../../images/info.svg'
+import Tooltip from '../Tooltip/Tooltip'
 
 class Modal extends Component {
   constructor(props) {
@@ -32,7 +34,12 @@ class Modal extends Component {
       <div id="modal">
         <div id="modal-body" className={`animated fadeInUp ${closing ? 'fadeOutDown' : ''}`}>
           <div className="modal-header">
-            <h2 className="modal-name">{name}</h2>
+            <h2 className="modal-name">
+              {name}
+              <Tooltip tooltipContent={<span>Click on the full screen icon below to make the tour full screen.</span>} position="right" id={'vr-tooltip'}>
+                <img src={infoBubble} alt="info bubble" className="info-bubble" />
+              </Tooltip>
+            </h2>
             <CloseModalButton closeModal={this.closeModal} />
           </div>
           <div className={`modal-content`}>
