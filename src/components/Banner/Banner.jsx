@@ -2,7 +2,7 @@ import React from 'react'
 import downArrow from '../../images/down_arrow.svg'
 import Slide from 'react-reveal/Slide'
 import Pulse from 'react-reveal/Pulse'
-import bannerImg from '../../images/banner.jpg'
+import bannerImg from '../../images/banner1.jpg'
 
 const Banner = () => {
   return (
