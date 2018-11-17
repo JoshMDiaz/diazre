@@ -17,6 +17,14 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
-    `gatsby-plugin-sass`
+    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-48293725-4",
+        head: true,
+        cookieDomain: "https://www.diazre.com/",
+      }
+    }
   ],
 }

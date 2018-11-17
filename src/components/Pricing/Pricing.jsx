@@ -7,18 +7,18 @@ import InterestedButton from '../Interested/Interested'
 
 const ScrollElement = Scroll.Element;
 
-const listItems = [
-  {
-    img: houseImg,
-    alt: 'house',
-    // text: '$0.10 per sq ft'
-  },
-  {
-    img: carImg,
-    alt: 'car',
-    // text: '$0.15 per mile'
-  }
-]
+// const listItems = [
+//   {
+//     img: houseImg,
+//     alt: 'house',
+//     // text: '$0.10 per sq ft'
+//   },
+//   {
+//     img: carImg,
+//     alt: 'car',
+//     // text: '$0.15 per mile'
+//   }
+// ]
 
 const AboutPricing = () => {
   return (
