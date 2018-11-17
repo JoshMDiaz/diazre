@@ -3,6 +3,9 @@
   grid-template-rows: calc(100vw - 60px) 1fr;
   overflow: hidden;
   cursor: pointer;
+  iframe {
+    width: 100%;
+  }
   .home-info {
     background: $text-color;
     color: $white-color;

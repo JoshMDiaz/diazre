@@ -1,6 +1,6 @@
 import React from 'react'
-import carImg from '../../images/car.svg'
-import houseImg from '../../images/house.svg'
+// import carImg from '../../images/car.svg'
+// import houseImg from '../../images/house.svg'
 import Slide from 'react-reveal/Slide'
 import Scroll from 'react-scroll'
 import InterestedButton from '../Interested/Interested'
