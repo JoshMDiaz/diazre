@@ -13,7 +13,7 @@ const Banner = () => {
     }}>
       <div className="lines">
         { Array.apply(1, {length: 6}).map((e, i) => (
-          <Slide down delay={Number(500 * (i + 1))} key={i}>
+          <Slide down delay={Number(150 * (i + 1))} key={i}>
             <div className="line"></div>
           </Slide>
         ))}

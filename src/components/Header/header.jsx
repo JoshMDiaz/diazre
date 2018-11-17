@@ -6,7 +6,7 @@ import InterestedButton from '../Interested/Interested';
 const Header = () => (
   <header>
     <div className="padding header-container">
-      <Fade delay={2500}>
+      <Fade delay={500}>
         <img src={logo} alt="logo" className="logo" />
         <InterestedButton text="I Need This" />
       </Fade>
