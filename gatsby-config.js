@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Diaz Real Estate',
+    title: 'Diaz Real Estate, LLC',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
