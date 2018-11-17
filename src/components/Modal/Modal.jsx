@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import CloseModalButton from './CloseModalButton'
 import PropTypes from 'prop-types'
-import infoBubble from '../../images/info.svg'
-import Tooltip from '../Tooltip/Tooltip'
 
 class Modal extends Component {
   constructor(props) {
@@ -27,21 +25,12 @@ class Modal extends Component {
       closing
     } = this.state,
     {
-      tour,
-      name
+      tour
     } = this.props;
     return (
       <div id="modal">
         <div id="modal-body" className={`animated fadeInUp ${closing ? 'fadeOutDown' : ''}`}>
           <div className="modal-header">
-            <h2 className="modal-name">
-              {name}
-              <div className="not-mobile">
-                <Tooltip tooltipContent={<span>Click on the full screen icon below to make the tour full screen.</span>} position="right" id={'vr-tooltip'}>
-                  <img src={infoBubble} alt="info bubble" className="info-bubble" />
-                </Tooltip>
-              </div>
-            </h2>
             <CloseModalButton closeModal={this.closeModal} />
           </div>
           <div className={`modal-content`}>
@@ -57,6 +46,5 @@ export default Modal;
 
 Modal.proptypes = {
   tour: PropTypes.element.isRequired,
-  name: PropTypes.string.isRequired,
   close: PropTypes.func.isRequired
 };

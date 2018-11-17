@@ -27,17 +27,21 @@ class Box extends Component {
         <div className={`box ${num % 2 ? 'even' : 'odd'}`} onClick={() => this.toggleModal(true)}>
           <Slide up>
             <div className={`home-picture`} style={{
-              background: `url(${image})`,
-              backgroundSize: 'cover',
-              backgroundPosition: '50% 50%'
-            }}></div>
+              backgroundImage: `linear-gradient(0deg, rgba(4, 21, 51, 0.4), rgba(4, 21, 51, 0.5)), url(${image})`,
+              backgroundPosition: 'center',
+              backgroundSize: 'cover'
+            }}>
+              <div className={`home-info`}>
+                <h3>{name}</h3>
+              </div>
+            </div>
           </Slide>
-          <Slide right={num % 2 ? false : true} left={num % 2 ? true : false} >
+          {/* <Slide right={num % 2 ? false : true} left={num % 2 ? true : false} >
             <div className={`home-info`}>
               <h3>{name}</h3>
               <p>( check it out )</p>
             </div>
-          </Slide>
+          </Slide> */}
         </div>
         <DialogOverlay isOpen={modalOpen}>
           <DialogContent>
