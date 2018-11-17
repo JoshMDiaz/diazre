@@ -7,12 +7,40 @@
   height: 100vh;
   overflow: hidden;
   z-index: -1;
+  display: flex;
+    justify-content: center;
+    align-items: center;
   .banner-media {
     width: 100%;
     height: 100%;
     transform: scale(1.3);
   }
   .banner-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 30px;
+    h1 {
+      font-size: 1.65em;
+      margin-bottom: 30px;
+      color: $white-color;
+      line-height: 1.4em;
+    }
+    h4 {
+      font-size: 1.25em;
+      color: $primary-color;
+      line-height: 1.2em;
+    }
+    @media only screen and (min-width: 768px) {
+      h1 {
+        font-size: 2.5em;
+      }
+      h4 {
+        font-size: 1.5em;
+      }
+    }
+  }
+  .banner-footer {
     position: absolute;
     z-index: 100;
     left: calc(50vw - 70px);

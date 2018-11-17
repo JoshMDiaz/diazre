@@ -18,8 +18,12 @@ const Banner = () => {
           </Slide>
         ))}
       </div>
+      <div className="banner-content">
+        <h1>Virtual Tour Photography</h1>
+        <h4>Giving your home an edge</h4>
+      </div>
       <Pulse delay={5000} forever>
-        <div className="banner-content padding max-width">
+        <div className="banner-footer padding max-width">
           <h3>Scroll</h3>
           <img src={downArrow} alt="down arrow"/>
         </div>
