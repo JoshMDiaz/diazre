@@ -3,9 +3,6 @@
   grid-template-rows: calc(100vw - 60px) 1fr;
   overflow: hidden;
   cursor: pointer;
-  iframe {
-    width: 100%;
-  }
   .home-info {
     color: $white-color;
     display: flex;
@@ -24,6 +21,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .fillers {
+    display: none;
   }
   @media only screen and (min-width: 500px) {
     grid-template-rows: calc(50vw - 30px);
@@ -46,8 +46,17 @@
       line-height: 34px;
     }
     .home-picture {
-      &:hover {
-        border-width: 15px;
+      @include border-radius(10px);
+    }
+    .fillers {
+      display: grid;
+      grid-gap: 10px;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      overflow: hidden;
+      @include border-radius(10px);
+      .filler {
+        @include border-radius(10px);
       }
     }
   }

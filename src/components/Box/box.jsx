@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Slide from 'react-reveal/Slide'
 import Modal from '../Modal/Modal'
@@ -6,6 +6,13 @@ import {
   DialogOverlay,
   DialogContent
 } from "@reach/dialog"
+
+const fillerColors = [
+  '#b8d4e2',
+  '#51a8d0',
+  '#5b7784',
+  '#deeef6'
+]
 
 class Box extends Component {
   constructor(props) {
@@ -19,9 +26,20 @@ class Box extends Component {
     this.setState({ modalOpen: opened });
   }
 
+  randomColor = () => {
+    for (let i = fillerColors.length - 1; i >= 0; i--) {
+      let randomIndex = Math.floor(Math.random()*(i+1)),
+          itemAtIndex = fillerColors[randomIndex]; 
+      fillerColors[randomIndex] = fillerColors[i]; 
+      fillerColors[i] = itemAtIndex;
+    }
+    return fillerColors;
+  }
+
   render() { 
     const { image, name, num } = this.props,
           { modalOpen } = this.state;
+    let fillerBgs = this.randomColor();
     return (
       <div>
         <div className={`box ${num % 2 ? 'even' : 'odd'}`} onClick={() => this.toggleModal(true)}>
@@ -36,12 +54,13 @@ class Box extends Component {
               </div>
             </div>
           </Slide>
-          {/* <Slide right={num % 2 ? false : true} left={num % 2 ? true : false} >
-            <div className={`home-info`}>
-              <h3>{name}</h3>
-              <p>( check it out )</p>
-            </div>
-          </Slide> */}
+          <div className="fillers">
+            { Array.apply(1, {length: 4}).map((f, j) => (
+              <Slide left={j === 2 || j === 0} right={j === 1 || j === 3}>
+                <div className={`filler`} key={j} style={{ background: fillerBgs[j] }}></div>
+              </Slide>
+            ))}
+          </div>
         </div>
         <DialogOverlay isOpen={modalOpen}>
           <DialogContent>
