@@ -11,19 +11,11 @@
     bottom: 0;
     right: 0;
     left: 0;
-    .modal-header {
-      padding: 0 30px;
-      height: 100px;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      position: absolute;
-      top: 0;
-      right: 0;
-      left: 0;
-      z-index: 10;
-    }
     .close {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      z-index: 10;
       &.hide-circle {
         .circle {
           @include animation(removeDash);
@@ -40,8 +32,8 @@
       width: 55px;
       height: 55px;
       position: absolute;
-      top: 20px;
-      right: 16px;
+      top: -15px;
+      right: -14px;
       cursor: pointer;
       .circle {
         stroke-dasharray: 1000;
