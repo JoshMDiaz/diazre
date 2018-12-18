@@ -16,8 +16,9 @@ header {
     color: $white-color;
     z-index: 100;
     &:hover {
-      background-color: $primary-color;
+      background: $primary-color;
       border-color: $primary-color;
+      box-shadow: none;
     }
   }
   @media only screen and (min-width: 768px) {

@@ -20,7 +20,7 @@ const Banner = () => {
       </div>
       <div className="banner-content">
         <h1>Virtual Tour Photography</h1>
-        <h4>Giving your home an edge</h4>
+        <h4>Showing off your unique space</h4>
       </div>
       <Pulse delay={5000} forever>
         <div className="banner-footer padding max-width">

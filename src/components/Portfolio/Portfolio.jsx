@@ -1,6 +1,7 @@
 import React from 'react'
 import Slide from 'react-reveal/Slide'
 import Box from '../Box/box'
+import Title from '../Title/Title'
 import centuryHome from '../../images/century.jpg'
 import condo from '../../images/condo1.jpg'
 import largeHouse from '../../images/large_house.jpg'
@@ -33,9 +34,9 @@ const Portfolio = () => {
     <div className="portfolio">
       <div className="padding max-width">
         <Slide left>
-          <h2>Portfolio</h2>
+          <Title beforeText="Check out our" yellow>awesome work</Title>
         </Slide>
-        <p>Check out some of my work! Click on the houses below to see a few different demos.</p>
+        <p>Here's a sample of our work! Click on the houses below to see a few different demos.</p>
       </div>
       <div className="list">
         { list.map((e, i) => (

@@ -6,6 +6,7 @@
     display: block;
   }
   .highlighted {
+    font-size: 34px;
     position: relative;
     display: inline-block;
     z-index: 10;
@@ -22,6 +23,12 @@
       right: -10px;
       background: $light-primary-color;
       z-index: -1;
+    }
+    &.yellow {
+      color: $secondary-color;
+      &::before {
+        background: $light-secondary-color;
+      }
     }
   }
 }

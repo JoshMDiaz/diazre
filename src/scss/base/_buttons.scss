@@ -11,8 +11,8 @@ button {
   @include border-radius;
   @include transition;
   &:hover {
-    color: $white-color;
-    background-color: $dark-primary-color;
+    background: $white-color;
     border-color: $dark-primary-color;
+    box-shadow: 0 6px 24px -4px rgba(156, 156, 156, 1);
   }
 }
