@@ -1,35 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:300');
-@import url('https://fonts.googleapis.com/css?family=Rubik:700');
 @import "~animate.css";
 
 body {
-  font-family: 'Khula', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: $text-color;
   font-weight: 300;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-}
-
-h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-  position: relative;
-  display: inline-block;
-  z-index: 10;
-  &::before {
-    content: '';
-    position: absolute;
-    bottom: -10%;
-    left: -15%;
-    height: 45%;
-    width: 120%;
-    background: $light-primary-color;
-    z-index: -1;
-    transform: skew(-25deg);
-  }
 }
 
 a {

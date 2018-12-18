@@ -35,7 +35,7 @@ const Portfolio = () => {
         <Slide left>
           <h2>Portfolio</h2>
         </Slide>
-        <p>Want to see a demo? Click on the houses below to see a few different demos.</p>
+        <p>Check out some of my work! Click on the houses below to see a few different demos.</p>
       </div>
       <div className="list">
         { list.map((e, i) => (

@@ -28,7 +28,7 @@ const AboutPricing = () => {
           <h2>Get a Quote</h2>
         </Slide>
         <p className="description">The pricing for interior VR Tours are based on the square footage of the house. Exterior VR Tours available upon request - price will vary based on the acreage of the area needing to be covered. Please contact us to get a quote!</p>
-        <InterestedButton text="I Need This" />
+        <InterestedButton text="Get a Quote" />
         {/* <ul>
           { listItems.map((e, i) => (
             <Slide key={i} left={i % 2 ? true : false} right={i % 2 ? false : true}>

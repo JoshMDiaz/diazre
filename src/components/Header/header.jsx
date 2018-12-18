@@ -8,7 +8,7 @@ const Header = () => (
     <div className="padding header-container">
       <Fade delay={500}>
         <img src={logo} alt="logo" className="logo" />
-        <InterestedButton text="I Need This" />
+        <InterestedButton text="Get a Quote" />
       </Fade>
     </div>
   </header>

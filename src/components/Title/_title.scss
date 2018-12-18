@@ -1,0 +1,27 @@
+.title {
+  font-size: 32px;
+  margin-bottom: 20px;
+  .before-text {
+    line-height: 42px;
+    display: block;
+  }
+  .highlighted {
+    position: relative;
+    display: inline-block;
+    z-index: 10;
+    margin-right: 10px;
+    font-weight: 700;
+    color: $dark-primary-color;
+    line-height: 42px;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -10px;
+      right: -10px;
+      background: $light-primary-color;
+      z-index: -1;
+    }
+  }
+}
