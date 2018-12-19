@@ -1,7 +1,15 @@
 .section {
+  margin: 75px 0;
+  &:first-of-type {
+    margin-top: 50px;
+  }
   @media only screen and (min-width: 1026px) {
+    margin: 100px 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 60px;
+  }
+  @media only screen and (min-width: 1280px) {
+    margin: 200px 0;
   }
 }
