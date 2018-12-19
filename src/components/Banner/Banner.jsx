@@ -1,6 +1,7 @@
 import React from 'react'
 import bannerImg from '../../images/banner1.jpg'
 import Title from '../Title/Title'
+import Section from '../Section/Section'
 
 const Banner = () => {
   return (
@@ -10,8 +11,10 @@ const Banner = () => {
       backgroundSize: 'cover'
     }}>
       <div className="banner-content">
-        <h1>Virtual Tour Photography</h1>
-        <Title beforeText="Showing off your">unique space</Title>
+        <Section media={<img src={'http://placehold.it/500x300'} alt="" />}>
+          <h1>Virtual Tour<br />Photography</h1>
+          <Title beforeText="Showing off your">unique space</Title>
+        </Section>
       </div>
     </div>
   );
