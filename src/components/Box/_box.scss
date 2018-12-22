@@ -47,7 +47,7 @@
       line-height: 51px;
     }
     .home-picture {
-      @include border-radius(10px);
+      @include border-radius;
     }
     .fillers {
       display: grid;
@@ -55,16 +55,10 @@
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, 1fr);
       overflow: hidden;
-      @include border-radius(10px);
+      @include border-radius;
       .filler {
-        @include border-radius(10px);
+        @include border-radius;
       }
-    }
-  }
-  @media only screen and (min-width: 768px) {
-    .home-info {
-      // font-size: 32px;
-      // line-height: 42px;
     }
   }
   @media only screen and (min-width: 1200px) {

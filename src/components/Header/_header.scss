@@ -1,33 +1,16 @@
 header {
-  .header-container {
-    display: flex;
-    // flex-direction: column;
+  .nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
     align-items: center;
-    justify-content: space-between;
   }
-  .logo {
-    width: 40px;
-    // margin-bottom: 30px;
-  }
-  // button {
-  //   border-color: $white-color;
-  //   color: $white-color;
-  //   z-index: 100;
-  //   &:hover {
-  //     background: $primary-color;
-  //     border-color: $primary-color;
-  //     box-shadow: none;
-  //   }
-  // }
   @media only screen and (min-width: 768px) {
     .header-container {
       flex-direction: row;
       left: auto;
       justify-content: space-between;
       width: calc(100vw - 60px);
-    }
-    .logo {
-      margin: 0;
     }
   }
 }

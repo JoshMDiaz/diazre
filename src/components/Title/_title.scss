@@ -23,6 +23,7 @@
       right: -10px;
       background: $light-primary-color;
       z-index: -1;
+      @include border-radius;
     }
     &.yellow {
       color: $secondary-color;

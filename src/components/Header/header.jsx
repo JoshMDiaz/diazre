@@ -1,15 +1,23 @@
 import React from 'react'
-import logo from '../../images/logo.svg'
-import Fade from 'react-reveal/Fade'
-import InterestedButton from '../Interested/Interested';
+
+const navArr = [
+  {
+    name: 'Who We Are'
+  },
+  {
+    name: 'What We Do'
+  },
+  {
+    name: 'Get a Quote'
+  },
+]
 
 const Header = () => (
   <header>
-    <div className="padding header-container">
-      <Fade delay={500}>
-        <img src={logo} alt="logo" className="logo" />
-        <InterestedButton text="Get a Quote" />
-      </Fade>
+    <div className="padding nav">
+      {navArr.map((e, i) => (
+        <span key={i}>{e.name}</span>
+      ))}
     </div>
   </header>
 )
