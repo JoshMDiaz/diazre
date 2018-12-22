@@ -10,7 +10,7 @@ const AboutPricing = () => {
   return (
     <div className="pricing padding max-width" name="get-a-quote">
       <Section>
-        <Slide left>
+        <Slide down>
           <Title beforeText="Just ask us">for a quote</Title>
         </Slide>
         <p className="description">The pricing for interior VR Tours are based on the square footage of the house. Exterior VR Tours available upon request - price will vary based on the acreage of the area needing to be covered. Please contact us to get a quote!</p>

@@ -1,27 +1,31 @@
 .nav {
-  background: linear-gradient(-210deg, rgba(34, 34, 34, .75) 60%, rgba(59, 59, 59, .75));
+  background: linear-gradient(to bottom, rgba(255, 255, 255, .8) 60%, rgba(255, 255, 255, .8));
   height: 100vh;
   position: fixed;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
+  padding: 40px 30px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
   z-index: 99;
   animation-duration: .25s;
+  img {
+    height: 40px;
+    margin-bottom: 60px;
+    align-self: flex-start;
+    position: relative;
+    top: -5px;
+  }
   ul {
     display: flex;
     flex-direction: column;
   }
   li {
-    font-size: 32px;
-    line-height: 48px;
-    margin: 30px 0;
-    text-align: center;
-    color: $white-color;
-    cursor: pointer;
-    @include transition;
+    font-size: 24px;
+    line-height: 34px;
+    margin: 20px 0;
+    color: $text-color;
   }
 }

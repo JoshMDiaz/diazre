@@ -33,7 +33,7 @@ const Portfolio = () => {
   return (
     <div className="portfolio" name="what-we-do">
       <div className="padding max-width">
-        <Slide left>
+        <Slide down>
           <Title beforeText="Check out our" yellow>awesome work</Title>
         </Slide>
         <p>Here's a sample of our work! Click on the houses below to see a few different demos.</p>

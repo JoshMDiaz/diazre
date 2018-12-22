@@ -8,7 +8,7 @@ const About = () => {
   return (
     <div className="about padding max-width" name="who-we-are">
       <Section>
-        <Slide left>
+        <Slide down>
           <Title beforeText="Why you should">
             <span>work with us</span>
           </Title>
