@@ -1,23 +1,18 @@
 import React from 'react'
-
-const navArr = [
-  {
-    name: 'Who We Are'
-  },
-  {
-    name: 'What We Do'
-  },
-  {
-    name: 'Get a Quote'
-  },
-]
+import NavButton from '../Nav/NavButton'
+import navContent from '../Nav/nav-content'
+import Scroll from 'react-scroll'
+const ScrollLink = Scroll.Link;
 
 const Header = () => (
-  <header>
-    <div className="padding nav">
-      {navArr.map((e, i) => (
-        <span key={i}>{e.name}</span>
-      ))}
+  <header className="padding">
+    <NavButton />
+    <div className="desktop-nav">
+      { navContent.map((e, i) => (
+        <ScrollLink key={i} to={e.section} spy={true} smooth={true} duration={250}>
+          <span>{e.name}</span>
+        </ScrollLink>
+      ))}      
     </div>
   </header>
 )

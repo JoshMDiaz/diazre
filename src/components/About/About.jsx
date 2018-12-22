@@ -6,7 +6,7 @@ import Section from '../Section/Section';
 
 const About = () => {
   return (
-    <div className="about padding max-width">
+    <div className="about padding max-width" name="who-we-are">
       <Section>
         <Slide left>
           <Title beforeText="Why you should">

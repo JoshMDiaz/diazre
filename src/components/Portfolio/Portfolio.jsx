@@ -31,7 +31,7 @@ const list = [
 
 const Portfolio = () => {
   return (
-    <div className="portfolio">
+    <div className="portfolio" name="what-we-do">
       <div className="padding max-width">
         <Slide left>
           <Title beforeText="Check out our" yellow>awesome work</Title>

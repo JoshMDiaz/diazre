@@ -1,7 +1,7 @@
 import React from 'react'
 import bannerImg from '../../images/banner.jpg'
-import Title from '../Title/Title'
 import logo from '../../images/logo_white.svg'
+import Fade from 'react-reveal/Fade'
 
 const Banner = () => {
   return (
@@ -11,9 +11,9 @@ const Banner = () => {
       backgroundSize: 'cover'
     }}>
       <div className="banner-content">
-        <img src={logo} alt="Diaz Real Estate, LLC" className="logo" />
-        <h1>Virtual Tour<br />Photography</h1>
-        <Title beforeText="Showing off your">unique space</Title>
+        <Fade up>
+          <img src={logo} alt="Diaz Real Estate, LLC" className="logo" />
+        </Fade>
       </div>
     </div>
   );
