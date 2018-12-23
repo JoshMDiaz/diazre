@@ -1,7 +1,6 @@
 import React from 'react'
 import Slide from 'react-reveal/Slide'
 import InterestedButton from '../Interested/Interested'
-// import Section from '../Section/Section'
 import Title from '../Title/Title'
 import Particles from 'react-particles-js'
 
