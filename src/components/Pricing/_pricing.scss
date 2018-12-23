@@ -1,73 +1,25 @@
 .pricing {
-  ul {
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    margin: 30px 0;
-  }
-  li {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    padding: 50px;
-    &::before {
-      content: '';
-      position: absolute;
-      bottom: -10px;
-      left: 0;
-      top: 0;
-      right: 50%;
-      background: $light-primary-color;
-      z-index: 1;
+  background: $primary-color;
+  position: relative;
+  color: $white-color;
+  .pricing-content {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    p {
+      margin: 0;
     }
-    &:nth-child(odd) {
-      &::before {
-        transform: skew(-25deg);
-      }
-    }
-    &:nth-child(even) {
-      &::before {
-        transform: skew(25deg);
-      }
-    }
-    span {
-      font-size: 28px;
-    }
-    span, img {
-      z-index: 5;
-    }
-  }
-  img {
-    width: 50vw;
-    margin-bottom: 30px;
   }
   button {
     margin-top: 30px;
-  }
-  @media only screen and (min-width: 500px) {
-    ul {
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: 1fr;
-      grid-gap: 30px;
+    color: $white-color;
+    &::before, &::after, i.line {
+      background: $white-color;
     }
-    li {
-      padding: 0;
-      &:nth-child(odd) {
-        &::before {
-          left: 20%;
-        }
+    span.button-text-container {
+      &::before, &::after {
+        background: $white-color;
       }
-      &:nth-child(even) {
-        &::before {
-          right: 20%;
-          left: 50%;
-        }
-      }
-    }
-    img {
-      width: auto;
-      height: 100px;
     }
   }
 }

@@ -10,21 +10,12 @@
     position: relative;
     display: inline-block;
     z-index: 10;
-    margin-right: 10px;
+    left: -10px;
+    padding: 5px 10px;
+    border: 1px solid $text-color;
     font-weight: 700;
     color: $dark-primary-color;
     line-height: 42px;
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: -10px;
-      right: -10px;
-      background: $light-primary-color;
-      z-index: -1;
-      @include border-radius;
-    }
     &.yellow {
       color: $secondary-color;
       &::before {
