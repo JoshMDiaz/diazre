@@ -3,7 +3,7 @@ import Slide from 'react-reveal/Slide'
 import Box from '../Box/box'
 import Title from '../Title/Title'
 import centuryHome from '../../images/century.jpg'
-import condo from '../../images/condo1.jpg'
+import condo from '../../images/condo.jpg'
 import largeHouse from '../../images/large_house.jpg'
 
 const list = [
@@ -34,14 +34,17 @@ const Portfolio = () => {
     <div className="portfolio" name="what-we-do">
       <div className="padding max-width">
         <Slide down>
-          <Title beforeText="Check out our" yellow>awesome work</Title>
+          <Title beforeText="Check out our" customClass="yellow">awesome work</Title>
         </Slide>
         <p>Here's a sample of our work! Click on the houses below to see a few different demos.</p>
       </div>
       <div className="list">
         { list.map((e, i) => (
-          <Box {...e} key={i} num={i} />
+          <Box {...e} key={i} />
         ))}
+        <div className="filler">
+          <span>More Coming Soon...</span>
+        </div>
       </div>
     </div>
   )

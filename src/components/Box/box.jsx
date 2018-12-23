@@ -20,16 +20,23 @@ class Box extends Component {
   }
 
   render() { 
-    const { image, name, num } = this.props,
+    const { image, name } = this.props,
           { modalOpen } = this.state;
     return (
       <div>
-        <div className={`box ${num % 2 ? 'even' : 'odd'}`} onClick={() => this.toggleModal(true)}>
+        <div className={`box`} onClick={() => this.toggleModal(true)}>
           <Slide up>
             <div className={`home-picture`}>
               <img src={image} alt={name}/>
               <div className="overlay"></div>
-              <h3>View</h3>
+              <div className="home-info">
+                <span className="name">{name}</span>
+                <span className="view">
+                  <span className="line before-line"></span>
+                  View
+                  <span className="line after-line"></span>
+                </span>
+              </div>
             </div>
           </Slide>
         </div>
@@ -48,6 +55,5 @@ export default Box;
 Box.proptypes = {
   image: PropTypes.string.isRequired,
   name: PropTypes.element.isRequired,
-  num: PropTypes.number.isRequired,
   tour: PropTypes.element.isRequired
 };

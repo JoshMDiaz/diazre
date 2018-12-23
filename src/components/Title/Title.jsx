@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Title = ({ children, afterText, beforeText, yellow }) => {
+const Title = ({ children, afterText, beforeText, customClass }) => {
   return (
     <div className="title">
       { beforeText && <span className="before-text">{beforeText}</span> }
-      <span className={`highlighted ${yellow ? 'yellow' : ''}`}>{children}</span>
+      <span className={`highlighted ${customClass ? customClass : ''}`}>{children}</span>
       { afterText && <span className="after-text">{afterText}</span> }
     </div>
   );

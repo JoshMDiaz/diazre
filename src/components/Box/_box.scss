@@ -1,22 +1,47 @@
 .box {
   display: grid;
-  grid-template-rows: calc(100vw - 60px) 1fr;
   overflow: hidden;
   cursor: pointer;
-  h3 {
-    color: $white-color;
+  .home-info {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    font-size: 36px;
-    line-height: 45px;
-    text-align: center;
-    padding: 0 20px;
-    letter-spacing: 2px;
-    text-shadow: 1px 1px 1px $text-color;
+    justify-content: center;
+    width: 100vw;
+  }
+  .name, .view {
     position: relative;
     z-index: 11;
+    color: $white-color;
+  }
+  .name {
+    font-size: 36px;
+    line-height: 45px;
+    max-width: 90%;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+  }
+  .view {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    width: 90px;
+    justify-content: center;
+    .line {
+      width: 15px;
+      height: 1px;
+      background: $white-color;
+      display: block;
+      @include transition;
+      position: absolute;
+      &.before-line {
+        left: 0;
+      }
+      &.after-line {
+        right: 0;
+      }
+    }
   }
   .home-picture {
     transition: all .25s ease-in-out;
@@ -28,10 +53,14 @@
     &:hover {
       img {
         @include transition(5s);
-        transform: scale(2);
+        transform: scale(1.35);
+      }
+      .overlay {
+        background: rgba(24, 24, 24, 0.4);
+        @include transition(.75s);
       }
     }
-    img, .overlay {
+    .home-info, .overlay {
       position: absolute;
       top: 0;
       right: 0;
@@ -41,43 +70,11 @@
     }
     img {
       @include transition(1s);
+      width: 100%;
     }
     .overlay {
+      @include transition;
       z-index: 10;
-      background: rgba(0, 0, 0, 0.4);
-    }
-  }
-  @media only screen and (min-width: 500px) {
-    grid-template-rows: calc(50vw - 30px);
-    grid-gap: 10px;
-    &.odd {
-      grid-template-columns: 60vw calc(40vw - 10px);
-    }
-    &.even {
-      grid-template-columns: calc(40vw - 10px) 60vw;
-      h3 {
-        grid-column: 1 / 2;
-      }
-      .home-picture {
-        grid-column: 2 / 3;
-        grid-row: 1 / 2;
-      }
-    }
-    h3 {
-      font-size: 42px;
-      line-height: 51px;
-    }
-    .home-picture {
-      @include border-radius;
-    }
-  }
-  @media only screen and (min-width: 1200px) {
-    grid-template-rows: calc(650px - 30px);
-    &.odd {
-      grid-template-columns: 60% calc(40% - 10px);
-    }
-    &.even {
-      grid-template-columns: calc(40% - 10px) 60%;
     }
   }
 }
