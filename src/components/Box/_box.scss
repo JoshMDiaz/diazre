@@ -3,7 +3,7 @@
   grid-template-rows: calc(100vw - 60px) 1fr;
   overflow: hidden;
   cursor: pointer;
-  .home-info {
+  h3 {
     color: $white-color;
     display: flex;
     flex-direction: column;
@@ -11,20 +11,41 @@
     align-items: center;
     font-size: 36px;
     line-height: 45px;
-    text-transform: uppercase;
     text-align: center;
     padding: 0 20px;
     letter-spacing: 2px;
     text-shadow: 1px 1px 1px $text-color;
+    position: relative;
+    z-index: 11;
   }
   .home-picture {
     transition: all .25s ease-in-out;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  .fillers {
-    display: none;
+    position: relative;
+    overflow: hidden;
+    &:hover {
+      img {
+        @include transition(5s);
+        transform: scale(2);
+      }
+    }
+    img, .overlay {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+    }
+    img {
+      @include transition(1s);
+    }
+    .overlay {
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.4);
+    }
   }
   @media only screen and (min-width: 500px) {
     grid-template-rows: calc(50vw - 30px);
@@ -34,7 +55,7 @@
     }
     &.even {
       grid-template-columns: calc(40vw - 10px) 60vw;
-      .home-info {
+      h3 {
         grid-column: 1 / 2;
       }
       .home-picture {
@@ -42,23 +63,12 @@
         grid-row: 1 / 2;
       }
     }
-    .home-info {
+    h3 {
       font-size: 42px;
       line-height: 51px;
     }
     .home-picture {
       @include border-radius;
-    }
-    .fillers {
-      display: grid;
-      grid-gap: 10px;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(2, 1fr);
-      overflow: hidden;
-      @include border-radius;
-      .filler {
-        @include border-radius;
-      }
     }
   }
   @media only screen and (min-width: 1200px) {
