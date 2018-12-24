@@ -19,7 +19,7 @@ class BoxTitleLetter extends Component {
     const { letter, num } = this.props,
           { changeToWhite } = this.state;
     return (
-      <Fade delay={num * 10} duration={1000}>
+      <Fade delay={num * 40} duration={500}>
         <span className={`box-title-letter ${changeToWhite ? 'white' : ''}`}>{letter}</span>
       </Fade>
     );

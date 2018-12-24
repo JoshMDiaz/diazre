@@ -2,6 +2,7 @@
   background: $primary-color;
   position: relative;
   color: $white-color;
+  overflow: hidden;
   canvas {
     display: none;
     @media only screen and (min-width: 768px) {

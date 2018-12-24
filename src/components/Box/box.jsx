@@ -41,11 +41,13 @@ class Box extends Component {
                 ) : (
                   <span className="name">{name}</span>
                 ) }
-                <span className="view">
-                  <span className="line before-line"></span>
-                  View
-                  <span className="line after-line"></span>
-                </span>
+                <button className={animateText ? 'hovered' : ''}>
+                  <span className="button-text-container">
+                    <i className="line before-line"></i>
+                    <span className="button-text">View</span>
+                    <i className="line after-line"></i>
+                  </span>
+                </button>
               </div>
             </div>
           </Slide>
