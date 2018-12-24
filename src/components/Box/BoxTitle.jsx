@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Fade from 'react-reveal/Fade'
+import BoxTitleLetter from './BoxTitleLetter';
 
 class BoxTitle extends Component {
   constructor(props) {
@@ -21,11 +21,9 @@ class BoxTitle extends Component {
   render() { 
     const { textArr } = this.state;
     return (
-      <div className="name">
+      <div className="name box-title">
         { textArr.map((e, i) => (
-          <Fade delay={`${i * 8}0`} duration={500} key={i}>
-            <span>{e}</span>
-          </Fade>
+          <BoxTitleLetter letter={e} num={i} key={i} />
         ))}
       </div>
     );

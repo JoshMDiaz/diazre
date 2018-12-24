@@ -21,6 +21,13 @@
     text-align: center;
     margin-bottom: 20px;
     letter-spacing: 3px;
+    &.box-title {
+      color: $light-gray-color;
+    }
+    .box-title-letter.white {
+      @include transition(1s);
+      color: $white-color;
+    }
   }
   .view {
     font-size: 18px;

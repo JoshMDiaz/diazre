@@ -5,6 +5,7 @@ import Title from '../Title/Title'
 import centuryHome from '../../images/century.jpg'
 import condo from '../../images/condo.jpg'
 import largeHouse from '../../images/large_house.jpg'
+import BoxTitle from '../Box/BoxTitle';
 
 const list = [
   {
@@ -18,7 +19,7 @@ const list = [
     tour: <iframe title="large" style={{width: '100vw', height: `100vh`}} width="640" height="480" frameBorder="0" allowFullScreen src="https://players.cupix.com/embed.html?key=CHHNXosn"></iframe>
   },
   {
-    name: 'Condo',
+    name: 'The Condo',
     image: condo,
     tour: <iframe title="condo" style={{width: '100vw', height: `100vh`}} width="640" height="480" frameBorder="0" allowFullScreen src="https://players.cupix.com/embed.html?key=i17QURUh"></iframe>
   },
@@ -43,7 +44,7 @@ const Portfolio = () => {
           <Box {...e} key={i} />
         ))}
         <div className="filler">
-          <span>More Coming Soon...</span>
+          <BoxTitle animate={true} text="More Coming Soon..." />
         </div>
       </div>
     </div>
