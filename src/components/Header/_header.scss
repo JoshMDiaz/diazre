@@ -1,34 +1,50 @@
 header {
-  .header-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    left: calc(50% - 120px);
-  }
-  .logo {
-    width: 40px;
-    margin-bottom: 30px;
-  }
-  button {
-    border-color: $white-color;
-    color: $white-color;
-    z-index: 100;
-    &:hover {
-      background-color: $primary-color;
-      border-color: $primary-color;
-    }
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  max-width: 1260px;
+  margin: auto;
+  .desktop-nav {
+    display: none;
   }
   @media only screen and (min-width: 768px) {
-    .header-container {
-      flex-direction: row;
-      left: auto;
-      justify-content: space-between;
-      width: calc(100vw - 60px);
+    .desktop-nav {
+      display: block;
+      a {
+        color: $light-gray-color;
+        @include transition;
+        cursor: pointer;
+        margin-left: 30px;
+        position: relative;
+        z-index: 2;
+        &::before {
+          content: '';
+          @include border-radius;
+          position: absolute;
+          bottom: -5px;
+          left: -15px;
+          background: $light-primary-color;
+          z-index: -1;
+          @include transition;
+          width: 0;
+          height: 1px;
+          opacity: 0;
+        }
+        &:hover {
+          color: $white-color;
+          &::before {
+            width: 30%;
+            left: 0;
+            opacity: 1;
+          }
+        }
+      }
     }
-    .logo {
-      margin: 0;
+    #nav-button {
+      display: none;
     }
   }
 }

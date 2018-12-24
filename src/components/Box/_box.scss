@@ -1,79 +1,80 @@
 .box {
   display: grid;
-  grid-template-rows: calc(100vw - 60px) 1fr;
   overflow: hidden;
   cursor: pointer;
   .home-info {
-    color: $white-color;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    width: 100vw;
+  }
+  .name, .view {
+    position: relative;
+    z-index: 11;
+    color: $white-color;
+  }
+  .name {
     font-size: 36px;
     line-height: 45px;
-    text-transform: uppercase;
+    max-width: 90%;
     text-align: center;
-    padding: 0 20px;
-    letter-spacing: 2px;
-    text-shadow: 1px 1px 1px $text-color;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+    &.box-title {
+      color: $light-gray-color;
+    }
+    .box-title-letter.white {
+      @include transition(1s);
+      color: $white-color;
+    }
   }
   .home-picture {
     transition: all .25s ease-in-out;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  .fillers {
-    display: none;
-  }
-  @media only screen and (min-width: 500px) {
-    grid-template-rows: calc(50vw - 30px);
-    grid-gap: 10px;
-    &.odd {
-      grid-template-columns: 60vw calc(40vw - 10px);
-    }
-    &.even {
-      grid-template-columns: calc(40vw - 10px) 60vw;
-      .home-info {
-        grid-column: 1 / 2;
+    position: relative;
+    overflow: hidden;
+    &:hover {
+      img {
+        @include transition(5s);
+        transform: scale(1.35);
       }
-      .home-picture {
-        grid-column: 2 / 3;
-        grid-row: 1 / 2;
+      .overlay {
+        background: rgba(24, 24, 24, 0.4);
+        @include transition(.75s);
       }
     }
     .home-info {
-      font-size: 42px;
-      line-height: 51px;
+      z-index: 12;
     }
-    .home-picture {
-      @include border-radius(10px);
+    .home-info, .overlay {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      width: 100%;
     }
-    .fillers {
-      display: grid;
-      grid-gap: 10px;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(2, 1fr);
-      overflow: hidden;
-      @include border-radius(10px);
-      .filler {
-        @include border-radius(10px);
+    img {
+      @include transition(1s);
+      width: 100%;
+    }
+    .overlay {
+      @include transition;
+      z-index: 10;
+    }
+    button {
+      color: $white-color;
+      &::before, &::after, i.line {
+        background: $white-color;
       }
-    }
-  }
-  @media only screen and (min-width: 768px) {
-    .home-info {
-      // font-size: 32px;
-      // line-height: 42px;
-    }
-  }
-  @media only screen and (min-width: 1200px) {
-    grid-template-rows: calc(650px - 30px);
-    &.odd {
-      grid-template-columns: 60% calc(40% - 10px);
-    }
-    &.even {
-      grid-template-columns: calc(40% - 10px) 60%;
+      span {
+        &::before, &::after {
+          background: $white-color;
+        }
+      }
     }
   }
 }
