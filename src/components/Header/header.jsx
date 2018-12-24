@@ -8,7 +8,7 @@ const ScrollLink = Scroll.Link;
 const Header = () => (
   <header className="padding">
     <Slide down>
-      <NavButton />
+      {/* <NavButton /> */}
       <div className="desktop-nav">
         { navContent.map((e, i) => (
           <ScrollLink key={i} to={e.section} spy={true} smooth={true} duration={450}>

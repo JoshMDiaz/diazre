@@ -1,50 +1,51 @@
 header {
   position: absolute;
-  top: 10px;
+  bottom: 30px;
   left: 0;
   right: 0;
-  display: flex;
-  justify-content: flex-end;
   max-width: 1260px;
   margin: auto;
   .desktop-nav {
-    display: none;
-  }
-  @media only screen and (min-width: 768px) {
-    .desktop-nav {
-      display: block;
-      a {
-        color: $light-gray-color;
+    display: flex;
+    justify-content: space-around;
+    a {
+      color: $light-gray-color;
+      @include transition;
+      cursor: pointer;
+      // margin-left: 30px;
+      position: relative;
+      z-index: 2;
+      &::before {
+        content: '';
+        @include border-radius;
+        position: absolute;
+        bottom: -5px;
+        left: -15px;
+        background: $light-primary-color;
+        z-index: -1;
         @include transition;
-        cursor: pointer;
-        margin-left: 30px;
-        position: relative;
-        z-index: 2;
+        width: 0;
+        height: 1px;
+        opacity: 0;
+      }
+      &:hover {
+        color: $white-color;
         &::before {
-          content: '';
-          @include border-radius;
-          position: absolute;
-          bottom: -5px;
-          left: -15px;
-          background: $light-primary-color;
-          z-index: -1;
-          @include transition;
-          width: 0;
-          height: 1px;
-          opacity: 0;
-        }
-        &:hover {
-          color: $white-color;
-          &::before {
-            width: 30%;
-            left: 0;
-            opacity: 1;
-          }
+          width: 30%;
+          left: 0;
+          opacity: 1;
         }
       }
     }
-    #nav-button {
-      display: none;
+  }
+  @media only screen and (min-width: 768px) {
+    top: 10px;
+    bottom: auto;
+    .desktop-nav {
+      justify-content: flex-end;
+      a {
+        margin-left: 30px;
+      }
     }
   }
 }
