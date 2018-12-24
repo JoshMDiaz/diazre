@@ -6,12 +6,14 @@ import {
   DialogOverlay,
   DialogContent
 } from "@reach/dialog"
+import BoxTitle from './BoxTitle';
 
 class Box extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      modalOpen: false
+      modalOpen: false,
+      animateText: false
     }
   }
 
@@ -19,18 +21,26 @@ class Box extends Component {
     this.setState({ modalOpen: opened });
   }
 
+  toggleAnimate = (animate) => {
+    this.setState({ animateText: animate });
+  }
+
   render() { 
     const { image, name } = this.props,
-          { modalOpen } = this.state;
+          { modalOpen, animateText } = this.state;
     return (
       <div>
-        <div className={`box`} onClick={() => this.toggleModal(true)}>
+        <div className={`box`} onClick={() => this.toggleModal(true)} onMouseEnter={() => this.toggleAnimate(true)} onMouseLeave={() => this.toggleAnimate(false)}>
           <Slide up>
             <div className={`home-picture`}>
               <img src={image} alt={name}/>
               <div className="overlay"></div>
               <div className="home-info">
-                <span className="name">{name}</span>
+                { animateText ? (
+                  <BoxTitle animate={animateText} text={name} />
+                ) : (
+                  <span className="name">{name}</span>
+                ) }
                 <span className="view">
                   <span className="line before-line"></span>
                   View
