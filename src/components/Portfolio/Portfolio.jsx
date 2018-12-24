@@ -1,5 +1,5 @@
 import React from 'react'
-import Slide from 'react-reveal/Slide'
+import Fade from 'react-reveal/Fade'
 import Box from '../Box/box'
 import Title from '../Title/Title'
 import centuryHome from '../../images/century.jpg'
@@ -32,12 +32,11 @@ const list = [
 
 const Portfolio = () => {
   return (
-    <div className="portfolio" name="what-we-do">
+    <section className="portfolio" name="what-we-do">
       <div className="padding max-width">
-        <Slide down>
+        <Fade down>
           <Title beforeText="Check out our" customClass="yellow">awesome work</Title>
-        </Slide>
-        <p>Here's a sample of our work! Click on the houses below to see a few different demos.</p>
+        </Fade>
       </div>
       <div className="list">
         { list.map((e, i) => (
@@ -47,7 +46,7 @@ const Portfolio = () => {
           <BoxTitle animate={true} text="More Coming Soon..." />
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

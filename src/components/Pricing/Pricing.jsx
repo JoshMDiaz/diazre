@@ -6,7 +6,7 @@ import Particles from 'react-particles-js'
 
 const AboutPricing = () => {
   return (
-    <div className="pricing" name="get-a-quote">
+    <section className="pricing" name="get-a-quote">
       <div className="max-width padding">
         <Particles style={{ opacity: '.3'}}
         />
@@ -18,7 +18,7 @@ const AboutPricing = () => {
           <InterestedButton text="Get a Quote" />
         </div>
       </div>
-    </div>
+    </section>
   );
 }
  
