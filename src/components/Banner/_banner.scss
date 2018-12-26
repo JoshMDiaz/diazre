@@ -1,5 +1,7 @@
 .banner {
   height: 100vh;
+  position: relative;
+  z-index: 1;
   .banner-content {
     display: flex;
     flex-direction: column;

@@ -16,7 +16,7 @@ class NavButton extends Component {
   toggleMenu = (openMenu, section, navButton) => {
     if (!openMenu) {
       // document.querySelector('body').style.overflow = 'inherit';
-      // document.querySelector('.banner-content').classList.add('blur');
+      document.querySelector('.banner-content').classList.remove('blur');
       this.setState({
         menuOpen: false, closing: true
       }, () => {
@@ -29,7 +29,7 @@ class NavButton extends Component {
       }
     } else {
       // document.querySelector('body').style.overflow = 'hidden';
-      // document.querySelector('.banner-content').classList.add('blur');
+      document.querySelector('.banner-content').classList.add('blur');
       this.setState({ menuOpen: true, open: true, closing: false });
     }
   }

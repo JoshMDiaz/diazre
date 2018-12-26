@@ -5,7 +5,7 @@ import logo from '../../images/logo_camera.svg'
 
 const Nav = ({ close, closing }) => {
   return (
-    <div className={`nav animated ${closing ? 'slideOutRight' : 'slideInRight'}`}>
+    <div className={`nav animated ${closing ? 'fadeOut' : 'fadeIn'}`}>
       <img src={logo} alt="Diaz Real Estate, LLC"/>
       <ul>
         { navContent.map((e, i) => (

@@ -30,7 +30,12 @@ class Box extends Component {
           { modalOpen, animateText } = this.state;
     return (
       <div>
-        <div className={`box`} onClick={() => this.toggleModal(true)} onMouseEnter={() => this.toggleAnimate(true)} onMouseLeave={() => this.toggleAnimate(false)}>
+        <div
+          className={`box`}
+          onMouseUp={() => this.toggleModal(true)}
+          onMouseEnter={() => this.toggleAnimate(true)}
+          onMouseLeave={() => this.toggleAnimate(false)}
+        >
           <Slide up>
             <div className={`home-picture`}>
               <img src={image} alt={name}/>
@@ -41,7 +46,7 @@ class Box extends Component {
                 ) : (
                   <span className="name">{name}</span>
                 ) }
-                <button className={animateText ? 'hovered' : ''}>
+                <button className={animateText ? 'hovered' : ''} onClick={() => this.toggleModal(true)}>
                   <span className="button-text-container">
                     <i className="line before-line"></i>
                     <span className="button-text">View</span>
