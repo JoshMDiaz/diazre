@@ -15,7 +15,7 @@ class NavButton extends Component {
 
   toggleMenu = (openMenu, section, navButton) => {
     if (!openMenu) {
-      // document.querySelector('body').style.overflow = 'inherit';
+      document.querySelector('body').style.position = 'relative';
       document.querySelector('.banner-content').classList.remove('blur');
       this.setState({
         menuOpen: false, closing: true
@@ -28,7 +28,8 @@ class NavButton extends Component {
         this.scrollToSection(section);
       }
     } else {
-      // document.querySelector('body').style.overflow = 'hidden';
+      window.scrollTo(0, 0);
+      document.querySelector('body').style.position = 'fixed';
       document.querySelector('.banner-content').classList.add('blur');
       this.setState({ menuOpen: true, open: true, closing: false });
     }
