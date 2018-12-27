@@ -9,6 +9,11 @@ button {
   cursor: pointer;
   margin: 20px 0;
 
+  &.light {
+    color: $white-color;
+    background: rgba(0, 0, 0, 0.3);
+  }
+
   span {
     &.button-text-container {
       display: flex;
