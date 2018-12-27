@@ -67,14 +67,7 @@
     }
     button {
       color: $white-color;
-      &::before, &::after, i.line {
-        background: $white-color;
-      }
-      span {
-        &::before, &::after {
-          background: $white-color;
-        }
-      }
+      background: none;
     }
   }
 }

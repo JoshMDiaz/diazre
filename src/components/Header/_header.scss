@@ -35,7 +35,6 @@ header {
 
         &::before {
           content: '';
-          @include border-radius;
           position: absolute;
           bottom: -5px;
           left: -15px;
