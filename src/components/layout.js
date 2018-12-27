@@ -7,6 +7,8 @@ import Header from './Header/header'
 import Footer from './Footer/footer'
 import '../scss/main.scss'
 
+import ogImg from '../images/og.jpg'
+
 const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
@@ -25,6 +27,7 @@ const Layout = ({ children }) => (
           meta={[
             { name: 'description', content: 'VR Photography powered by Diaz Real Estate, LLC in Utah County.' },
             { name: 'keywords', content: 'VR Photography, Real Estate, homes, photography, vr, utah county' },
+            { property: 'og:image', content: ogImg },
           ]}
         >
           <html lang="en" />
