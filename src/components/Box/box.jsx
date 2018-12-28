@@ -7,6 +7,7 @@ import {
   DialogContent
 } from "@reach/dialog"
 import BoxTitle from './BoxTitle';
+import Button from '../Button/Button';
 
 class Box extends Component {
   constructor(props) {
@@ -46,13 +47,12 @@ class Box extends Component {
                 ) : (
                   <span className="name">{name}</span>
                 ) }
-                <button className={animateText ? 'hovered' : ''} onClick={() => this.toggleModal(true)}>
-                  <span className="button-text-container">
-                    <i className="line before-line"></i>
-                    <span className="button-text">View</span>
-                    <i className="line after-line"></i>
-                  </span>
-                </button>
+                <Button
+                  text="View"
+                  customClass={animateText ? 'hovered' : ''}
+                  onClick={() => this.toggleModal(true)}
+                  light
+                />
               </div>
             </div>
           </Slide>
