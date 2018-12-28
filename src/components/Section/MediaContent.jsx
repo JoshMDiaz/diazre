@@ -6,7 +6,9 @@ const MediaContent = ({ img, alt, children, reverse }) => {
       <div className="content">{children}</div>
       <div className="media">
         <div className="media-bg"></div>
-        <img src={img} alt={alt} />
+        <div className="media-image">
+          <img src={img} alt={alt} />
+        </div>
       </div>
     </div>
   );
