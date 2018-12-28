@@ -1,5 +1,8 @@
 .media-content {
-  margin: 80px 0;
+  margin: 100px 0;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
   &.reverse {
     .media {
       .media-bg {
@@ -17,7 +20,7 @@
       z-index: -1;
       top: -10px;
       bottom: -10px;
-      border: 2px solid $medium-gray-color;
+      border: 2px solid $dark-gray-color;
     }
     img {
       width: calc(100% - 20px);
@@ -51,6 +54,7 @@
     }
   }
   @media only screen and (min-width: 1026px) {
+    margin: 140px 0;
     .media {
       .media-bg {
         height: 400px;
