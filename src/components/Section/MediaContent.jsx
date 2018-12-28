@@ -5,6 +5,7 @@ const MediaContent = ({ img, alt, children, reverse }) => {
     <div className={`media-content ${reverse ? 'reverse' : ''}`}>
       <div className="content">{children}</div>
       <div className="media">
+        <div className="media-bg"></div>
         <img src={img} alt={alt} />
       </div>
     </div>
