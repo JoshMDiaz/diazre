@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import CloseModalButton from './CloseModalButton'
 import PropTypes from 'prop-types'
 
+let close;
+
 class Modal extends Component {
   constructor(props) {
     super(props)
@@ -9,12 +11,17 @@ class Modal extends Component {
       closing: false
     }
   }
+  
+  componentWillUnmount() {
+    this.isCancelled = true;
+    clearTimeout(close);
+  }
 
   closeModal = () => {
-    this.setState({
+    !this.isCancelled && this.setState({
       closing: true
     }, () => {
-      setTimeout(() => {
+      close = setTimeout(() => {
         this.props.close()
       }, 1500)
     })
@@ -27,11 +34,12 @@ class Modal extends Component {
     {
       content,
       darkIcon,
-      title
+      title,
+      form
     } = this.props
     return (
-      <div id="modal">
-        <div id="modal-body" className={`animated fadeInUp ${closing ? 'fadeOutDown' : ''}`}>
+      <div id="modal" className={`animated fadeIn ${closing ? 'fadeOut' : ''}`}>
+        <div id="modal-body" className={`animated fadeInUp ${closing ? 'fadeOutDown' : ''} ${form ? 'form-modal' : ''}`}>
           <div className="modal-header">
             <span className="modal-title">{title}</span>
             <CloseModalButton closeModal={this.closeModal} darkIcon={darkIcon} />
@@ -51,5 +59,6 @@ Modal.proptypes = {
   content: PropTypes.element.isRequired,
   close: PropTypes.func.isRequired,
   darkIcon: PropTypes.bool,
+  form: PropTypes.bool,
   title: PropTypes.string
 }

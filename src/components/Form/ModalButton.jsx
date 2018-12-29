@@ -12,7 +12,9 @@ class ModalButton extends Component {
   }
 
   openModal = () => {
-    this.setState({ modalOpen: true });
+    this.setState({
+      modalOpen: true
+    });
   }
 
   closeModal = () => {
@@ -24,7 +26,7 @@ class ModalButton extends Component {
     return (
       <div className="modal-button">
         <Button text="Get a Quote" light={this.props.light} onClick={this.openModal} />
-        { modalOpen && <Modal close={this.closeModal} content={<Form />} title="Get a Quote" darkIcon /> }
+        { modalOpen && <Modal close={this.closeModal} content={<Form />} title="Get a Quote" darkIcon form /> }
       </div>
     );
   }

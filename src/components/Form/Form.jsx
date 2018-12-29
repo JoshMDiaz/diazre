@@ -75,23 +75,11 @@ class Form extends Component {
   render() {
     const { enableSubmit } = this.state;
     return (
-      <form name="contact" method="POST" netlify>
+      <form name="contact" method="POST" action="?success" data-netlify="true">
         {this.formInputs.map((e, i) => {
           return <FormInput formObj={e} key={i} cb={this.checkValidity} />
         })}
         <FormTextarea formObj={this.formTextarea} cb={this.checkValidity} />
-        {/* <div className="form-element">
-          <label>Name</label>
-          <input type="text" name="name" />
-        </div>
-        <div className="form-element">
-          <label>Email</label>
-          <input type="text" name="email" />
-        </div> */}
-        {/* <div className="form-textarea">
-          <label>Message</label>
-          <textarea name="message" />
-        </div> */}
         <div data-netlify-recaptcha="true" />
         <Button text="Send" type="submit" disabled={!enableSubmit} />
       </form>

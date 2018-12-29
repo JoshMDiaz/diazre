@@ -3,6 +3,7 @@ import Scroll from 'react-scroll'
 import Nav from './Nav'
 
 const scroller = Scroll.scroller
+let close;
  
 class NavButton extends Component {
   constructor(props) {
@@ -12,16 +13,21 @@ class NavButton extends Component {
       open: false
     }
   }
+  
+  componentWillUnmount() {
+    this.isCancelled = true;
+    clearTimeout(close);
+  }
 
   toggleMenu = (openMenu, section, navButton) => {
     if (!openMenu) {
       document.querySelector('body').style.position = 'relative'
       document.querySelector('.banner-content').classList.remove('blur')
-      this.setState({
+      !this.isCancelled && this.setState({
         menuOpen: false, closing: true
       }, () => {
-        setTimeout(() => {
-          this.setState({ open: false })
+        close = setTimeout(() => {
+          !this.isCancelled && this.setState({ open: false })
         }, 1000)
       })
       if (!navButton) {

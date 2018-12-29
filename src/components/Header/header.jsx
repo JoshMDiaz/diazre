@@ -6,7 +6,7 @@ import Scroll from 'react-scroll'
 const ScrollLink = Scroll.Link
 
 const Header = () => (
-  <header className="padding">
+  <header className="padding" id="top-page">
     <Slide down>
       <NavButton />
       <div className="desktop-nav">

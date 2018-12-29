@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import Fade from 'react-reveal/Fade'
 
+let colorChange;
+
 class BoxTitleLetter extends Component {
   constructor(props) {
     super(props)
@@ -10,9 +12,14 @@ class BoxTitleLetter extends Component {
   }
 
   componentDidMount() {
-    setTimeout(() => {
-      this.setState({ changeToWhite: true })
+    colorChange = setTimeout(() => {
+      !this.isCancelled && this.setState({ changeToWhite: true })
     }, 500)
+  }
+  
+  componentWillUnmount() {
+    this.isCancelled = true;
+    clearTimeout(colorChange);
   }
 
   render() { 
