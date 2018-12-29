@@ -1,0 +1,17 @@
+.thanks-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: calc(100vw - 60px);
+  height: 100px;
+  background: $light-primary-color;
+  color: $white-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 100;
+  font-size: 18px;
+  line-height: 28px;
+  padding: 30px;
+}

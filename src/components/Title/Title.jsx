@@ -8,7 +8,7 @@ const Title = ({ children, afterText, beforeText, customClass }) => {
       <span className={`highlighted ${customClass ? customClass : ''}`}>{children}</span>
       { afterText && <span className="after-text">{afterText}</span> }
     </div>
-  );
+  )
 }
  
 export default Title
@@ -17,4 +17,4 @@ Title.proptypes = {
   children: PropTypes.element.isRequired,
   beforeText: PropTypes.element,
   afterText: PropTypes.element
-};
+}

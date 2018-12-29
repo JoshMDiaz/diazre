@@ -9,13 +9,13 @@ const Nav = ({ close, closing }) => {
       <img src={logo} alt="Diaz Real Estate, LLC"/>
       <ul>
         { navContent.map((e, i) => (
-          <Fade delay={`${i + 1}50`} key={i}>
+          <Fade delay={i * 100} key={i}>
             <li onClick={() => close(false, e.section)}>{e.name}</li>
           </Fade>
         ))}
       </ul>
     </div>
-  );
+  )
 }
  
-export default Nav;
+export default Nav

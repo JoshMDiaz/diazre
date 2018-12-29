@@ -2,22 +2,29 @@ import React, { Component } from 'react'
 import CloseModalButton from './CloseModalButton'
 import PropTypes from 'prop-types'
 
+let close;
+
 class Modal extends Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       closing: false
     }
   }
+  
+  componentWillUnmount() {
+    this.isCancelled = true;
+    clearTimeout(close);
+  }
 
   closeModal = () => {
-    this.setState({
+    !this.isCancelled && this.setState({
       closing: true
     }, () => {
-      setTimeout(() => {
-        this.props.close();
-      }, 1500);
-    });
+      close = setTimeout(() => {
+        this.props.close()
+      }, 1500)
+    })
   }
 
   render() {
@@ -25,26 +32,33 @@ class Modal extends Component {
       closing
     } = this.state,
     {
-      tour
-    } = this.props;
+      content,
+      darkIcon,
+      title,
+      form
+    } = this.props
     return (
-      <div id="modal">
-        <div id="modal-body" className={`animated fadeInUp ${closing ? 'fadeOutDown' : ''}`}>
+      <div id="modal" className={`animated fadeIn ${closing ? 'fadeOut' : ''}`}>
+        <div id="modal-body" className={`animated fadeInUp ${closing ? 'fadeOutDown' : ''} ${form ? 'form-modal' : ''}`}>
           <div className="modal-header">
-            <CloseModalButton closeModal={this.closeModal} />
+            <span className="modal-title">{title}</span>
+            <CloseModalButton closeModal={this.closeModal} darkIcon={darkIcon} />
           </div>
           <div className={`modal-content`}>
-            {tour}
+            {content}
           </div>
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default Modal;
+export default Modal
 
 Modal.proptypes = {
-  tour: PropTypes.element.isRequired,
-  close: PropTypes.func.isRequired
-};
+  content: PropTypes.element.isRequired,
+  close: PropTypes.func.isRequired,
+  darkIcon: PropTypes.bool,
+  form: PropTypes.bool,
+  title: PropTypes.string
+}

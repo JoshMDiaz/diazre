@@ -68,3 +68,11 @@ section {
 .blur {
   filter: blur(5px);
 }
+
+.show {
+  display: inherit;
+}
+
+.hide {
+  display: none !important;
+}

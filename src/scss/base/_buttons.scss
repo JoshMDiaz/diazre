@@ -61,7 +61,7 @@ button {
       transition-delay: 0.2s;
     }
 
-    &:hover, &.hovered {
+    &:hover:not(:disabled), &.hovered {
       &::before, &::after {
         width: calc(100% - 4px);
       }

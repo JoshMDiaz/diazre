@@ -5,7 +5,7 @@ const Testimonials = () => {
     <div className="testimonials padding max-width">
      <p>This is the testimonials section</p>
     </div>
-  );
+  )
 }
  
-export default Testimonials;
+export default Testimonials

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const d = new Date();
+const d = new Date()
 
 const Footer = () => (
   <footer>

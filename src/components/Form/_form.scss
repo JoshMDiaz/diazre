@@ -1,0 +1,90 @@
+form {
+  padding: 120px 30px 60px;
+  position: relative;
+  .form-element {
+    margin-bottom: 25px;
+    height: 50px;
+  }
+  .form-textarea {
+    height: 105px;
+    label {
+      bottom: -50px;
+    }
+  }
+  label {
+    display: block;
+    color: $text-color;
+    position: relative;
+    font-weight: 300;
+    bottom: -15px;
+    font-size: 18px;
+    @include transition;
+    line-height: 20px;
+    &.small {
+      top: -3px;
+      font-size: 15px;
+    }
+    &.focused {
+      color: $primary-color;
+    }
+    &.invalid {
+      color: $red-color;
+    }
+  }
+  button {
+    &:disabled {
+      opacity: .5;
+      cursor: not-allowed;
+    }
+  }
+  //firefox normalize
+  input:required {
+    box-shadow:none;
+  }
+  input:invalid {
+    box-shadow:0 0 3px $white-color;
+  }
+  :focus {
+    outline: 0 !important;
+  }
+  :-moz-focusring {
+    outline: 0 !important;
+  }
+  :link:hover {
+    outline: 0 !important;
+  }
+  ::-moz-focus-inner {
+    outline: 0 !important;
+    border:0;
+  }
+  a, object, embed, a:active, a:focus, a:link, a:visited, a:hover {
+    outline: 0 !important;
+    border: 0 !important;
+    -moz-outline-style: none;
+  }
+  //end firefox normalize
+  input, textarea {
+    border: none;
+    border-bottom: 1px solid $text-color;
+    font-size: 18px;
+    border-radius: 0;
+    font-weight: 300;
+    width: 100%;
+    z-index: 1;
+    position: relative;
+    background: none;
+    transition: .5s ease;
+    &.focused, &:focus {
+      border-bottom: 2px solid $primary-color;
+      outline: none;
+    }
+    &.invalid {
+      border-bottom: 2px solid $red-color !important;
+    }
+  }
+  textarea {
+    height: 50px;
+    margin-bottom: 25px;
+    resize: none;
+  }
+}
