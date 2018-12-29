@@ -2,7 +2,8 @@ import React from 'react'
 import Slide from 'react-reveal/Slide'
 import Title from '../Title/Title'
 import Particles from 'react-particles-js'
-import ModalButton from '../Form/ModalButton'
+import Button from '../Button/Button';
+// import ModalButton from '../Form/ModalButton'
 
 const AboutPricing = () => {
   return (
@@ -15,7 +16,10 @@ const AboutPricing = () => {
             <Title beforeText="Just ask us" customClass="white">for a quote</Title>
           </Slide>
           <p className="description">The pricing for interior VR Tours are based on the square footage of the house. Exterior VR Tours available upon request - price will vary based on the acreage of the area needing to be covered. Please contact us to get a quote!</p>
-          <ModalButton light />
+          <a href="https://diazre.us19.list-manage.com/subscribe/post?u=3344b9f1941a28dcd26265a07&amp;id=acdfdaf584">
+            <Button text="Get a Quote" />
+          </a>
+          {/* <ModalButton light /> */}
         </div>
       </div>
     </section>
