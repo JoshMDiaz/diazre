@@ -15,13 +15,13 @@ class Form extends Component {
         valid: false,
         value: ''
       },
-      completedForm: false,
-      enableSubmit: false
+      enableSubmit: false,
+      count: 0
     }
 
     this.formInputs = [
       {
-        inputName: 'first_name',
+        inputName: 'name',
         inputType: 'text',
         label: 'Your Name',
         autoComplete: '',
@@ -45,6 +45,21 @@ class Form extends Component {
     };
   }
 
+  componentDidUpdate() {
+    const { name, email, count } = this.state;
+    if (count === 0 && name.value !== '' && email.value !== '' && email.valid) {
+      this.setState({
+        count: 1,
+        enableSubmit: true
+      });
+    } else if (count === 1 && !email.valid) {
+      this.setState({
+        count: 0,
+        enableSubmit: false
+      });
+    }
+  }
+
   checkValidity = (check) => {
     let field = check.name;
     this.setState(() => {
@@ -60,7 +75,7 @@ class Form extends Component {
   render() {
     const { enableSubmit } = this.state;
     return (
-      <form name="contact" method="POST" data-netlify="true">
+      <form name="contact" method="POST" netlify>
         {this.formInputs.map((e, i) => {
           return <FormInput formObj={e} key={i} cb={this.checkValidity} />
         })}
