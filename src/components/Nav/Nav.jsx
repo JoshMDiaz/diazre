@@ -15,7 +15,7 @@ const Nav = ({ close, closing }) => {
         ))}
       </ul>
     </div>
-  );
+  )
 }
  
-export default Nav;
+export default Nav

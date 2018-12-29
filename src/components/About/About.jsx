@@ -2,11 +2,11 @@ import React from 'react'
 import Slide from 'react-reveal/Slide'
 import Title from '../Title/Title'
 import MediaContent from '../Section/MediaContent'
-import Button from '../Button/Button'
 
 import exampleImg from '../../images/example.jpg'
 import laptopImg from '../../images/laptop.jpg'
 import backyardImg from '../../images/backyard.jpg'
+import ModalButton from '../Form/ModalButton'
 
 const About = () => {
   return (
@@ -28,12 +28,10 @@ const About = () => {
       <MediaContent img={backyardImg} alt="awesome backyard">
         <label>Who should use us?</label>
         <p>Simply put - anyone with a business and a physical space! For real estate agents, this may be the push that your potential buyers need to stop by and see your property. Wish more people would come to your bed and breakfast? Do you host weddings in your amazing backyard or unique building? The applications are endless! Don't miss this opportunity!</p>
-        <a href="https://diazre.us19.list-manage.com/subscribe/post?u=3344b9f1941a28dcd26265a07&amp;id=acdfdaf584">
-          <Button text="Get a Quote" />
-        </a>
+        <ModalButton />
       </MediaContent>
     </section>
-  );
+  )
 }
  
-export default About;
+export default About

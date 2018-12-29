@@ -16,7 +16,7 @@ const Banner = () => {
         </Fade>
       </div>
     </div>
-  );
+  )
 }
  
-export default Banner;
+export default Banner

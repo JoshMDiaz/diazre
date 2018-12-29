@@ -2,11 +2,11 @@ import React, { Component } from 'react'
 import Scroll from 'react-scroll'
 import Nav from './Nav'
 
-const scroller = Scroll.scroller;
+const scroller = Scroll.scroller
  
 class NavButton extends Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       menuOpen: false,
       open: false
@@ -15,23 +15,23 @@ class NavButton extends Component {
 
   toggleMenu = (openMenu, section, navButton) => {
     if (!openMenu) {
-      document.querySelector('body').style.position = 'relative';
-      document.querySelector('.banner-content').classList.remove('blur');
+      document.querySelector('body').style.position = 'relative'
+      document.querySelector('.banner-content').classList.remove('blur')
       this.setState({
         menuOpen: false, closing: true
       }, () => {
         setTimeout(() => {
-          this.setState({ open: false });
-        }, 1000);
-      });
+          this.setState({ open: false })
+        }, 1000)
+      })
       if (!navButton) {
-        this.scrollToSection(section);
+        this.scrollToSection(section)
       }
     } else {
-      window.scrollTo(0, 0);
-      document.querySelector('body').style.position = 'fixed';
-      document.querySelector('.banner-content').classList.add('blur');
-      this.setState({ menuOpen: true, open: true, closing: false });
+      window.scrollTo(0, 0)
+      document.querySelector('body').style.position = 'fixed'
+      document.querySelector('.banner-content').classList.add('blur')
+      this.setState({ menuOpen: true, open: true, closing: false })
     }
   }
 
@@ -44,7 +44,7 @@ class NavButton extends Component {
   }
 
   render() { 
-    const { open, menuOpen, closing } = this.state;
+    const { open, menuOpen, closing } = this.state
     return (
       <div>
         <div id="nav-button" onClick={() => this.toggleMenu(!menuOpen, null, true)}>
@@ -56,7 +56,7 @@ class NavButton extends Component {
         </div>
           {open && <Nav close={this.toggleMenu} closing={closing} /> }
       </div>
-    );
+    )
   }
 }
  

@@ -6,12 +6,12 @@ import {
   DialogOverlay,
   DialogContent
 } from "@reach/dialog"
-import BoxTitle from './BoxTitle';
-import Button from '../Button/Button';
+import BoxTitle from './BoxTitle'
+import Button from '../Button/Button'
 
 class Box extends Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       modalOpen: false,
       animateText: false
@@ -19,16 +19,16 @@ class Box extends Component {
   }
 
   toggleModal = (opened) => {
-    this.setState({ modalOpen: opened });
+    this.setState({ modalOpen: opened })
   }
 
   toggleAnimate = (animate) => {
-    this.setState({ animateText: animate });
+    this.setState({ animateText: animate })
   }
 
   render() { 
     const { image, name } = this.props,
-          { modalOpen, animateText } = this.state;
+          { modalOpen, animateText } = this.state
     return (
       <div>
         <div
@@ -63,14 +63,14 @@ class Box extends Component {
           </DialogContent>
         </DialogOverlay>
       </div>
-    );
+    )
   }
 }
  
-export default Box;
+export default Box
 
 Box.proptypes = {
   image: PropTypes.string.isRequired,
   name: PropTypes.element.isRequired,
   tour: PropTypes.element.isRequired
-};
+}

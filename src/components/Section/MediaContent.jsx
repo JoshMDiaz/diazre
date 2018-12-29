@@ -11,7 +11,7 @@ const MediaContent = ({ img, alt, children, reverse }) => {
         </div>
       </div>
     </div>
-  );
+  )
 }
  
-export default MediaContent;
+export default MediaContent

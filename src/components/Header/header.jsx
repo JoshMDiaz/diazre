@@ -3,7 +3,7 @@ import NavButton from '../Nav/NavButton'
 import navContent from '../Nav/nav-content'
 import Slide from 'react-reveal/Slide'
 import Scroll from 'react-scroll'
-const ScrollLink = Scroll.Link;
+const ScrollLink = Scroll.Link
 
 const Header = () => (
   <header className="padding">

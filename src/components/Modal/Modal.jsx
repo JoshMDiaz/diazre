@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 class Modal extends Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       closing: false
     }
@@ -15,9 +15,9 @@ class Modal extends Component {
       closing: true
     }, () => {
       setTimeout(() => {
-        this.props.close();
-      }, 1500);
-    });
+        this.props.close()
+      }, 1500)
+    })
   }
 
   render() {
@@ -25,26 +25,31 @@ class Modal extends Component {
       closing
     } = this.state,
     {
-      tour
-    } = this.props;
+      content,
+      darkIcon,
+      title
+    } = this.props
     return (
       <div id="modal">
         <div id="modal-body" className={`animated fadeInUp ${closing ? 'fadeOutDown' : ''}`}>
           <div className="modal-header">
-            <CloseModalButton closeModal={this.closeModal} />
+            <span className="modal-title">{title}</span>
+            <CloseModalButton closeModal={this.closeModal} darkIcon={darkIcon} />
           </div>
           <div className={`modal-content`}>
-            {tour}
+            {content}
           </div>
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default Modal;
+export default Modal
 
 Modal.proptypes = {
-  tour: PropTypes.element.isRequired,
-  close: PropTypes.func.isRequired
-};
+  content: PropTypes.element.isRequired,
+  close: PropTypes.func.isRequired,
+  darkIcon: PropTypes.bool,
+  title: PropTypes.string
+}
