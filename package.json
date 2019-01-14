@@ -1,13 +1,14 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "diaz-real-estate",
+  "description": "Diaz Real Estate, LLC specializes in Virtual Tour Photography for private and commercial real estate. If you are listing a home or if you simply want to show off your unique space, you need to have a virtual tour!",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Josh Diaz <iknowtennispro@gmail.com>",
   "dependencies": {
     "@reach/dialog": "^0.1.2",
     "animate.css": "^3.7.0",
     "gatsby": "^2.0.19",
     "gatsby-plugin-google-analytics": "^2.0.7",
+    "gatsby-plugin-mailchimp": "^4.0.0",
     "gatsby-plugin-manifest": "^2.0.12",
     "gatsby-plugin-offline": "^2.0.5",
     "gatsby-plugin-react-helmet": "^3.0.0",
@@ -19,6 +20,7 @@
     "react-particles-js": "^2.4.2",
     "react-reveal": "^1.2.2",
     "react-scroll": "^1.7.10",
+    "react-toastify": "^4.5.2",
     "react-tooltip": "^3.9.0"
   },
   "keywords": [

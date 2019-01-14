@@ -19,6 +19,7 @@ class Thanks extends Component {
     this.isCancelled = true;
     clearTimeout(close);
     clearTimeout(top);
+    clearTimeout(messageClosing);
   }
 
   scrollTop() {
@@ -50,7 +51,7 @@ class Thanks extends Component {
     const { show, closing } = this.state;
     return (
       <div className={`thanks-wrapper ${show ? 'show slideInDown' : 'hide'} animated ${closing ? 'slideOutUp' : ''}`}>
-        <span>Thanks for reaching out!<br />We will get back to you in 24 - 48 hours.</span>
+        <span>Thanks for reaching out!<br />We will get back to you in 1 - 2 business days.</span>
       </div>
     );
   }

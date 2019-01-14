@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import FormTextarea from './FormTextarea'
 import FormInput from './FormInput'
-import Button from '../Button/Button';
+import Button from '../Button/Button'
+import addToMailchimp from 'gatsby-plugin-mailchimp'
 
 class Form extends Component {
   constructor(props) {
@@ -41,7 +42,7 @@ class Form extends Component {
     this.formTextarea = {
       label: 'Message',
       focused: false,
-      name: 'description'
+      name: 'message'
     };
   }
 
@@ -72,10 +73,22 @@ class Form extends Component {
     });
   }
 
+  handleSubmit = (e) => {
+    e.preventDefault();
+    let listFields = {
+      NAME: this.state.name.value,
+      EMAIL: this.state.email.value,
+      MESSAGE: this.state.message.value
+    }
+    addToMailchimp('iknowtennispro@gmail.com', listFields).then(data => {
+      this.props.close(true);
+    })
+  }
+
   render() {
     const { enableSubmit } = this.state;
     return (
-      <form name="contact" method="POST" action="?success" data-netlify="true">
+      <form onSubmit={this.handleSubmit}>
         {this.formInputs.map((e, i) => {
           return <FormInput formObj={e} key={i} cb={this.checkValidity} />
         })}
