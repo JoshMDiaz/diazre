@@ -25,6 +25,12 @@ module.exports = {
         head: true,
         cookieDomain: "https://www.diazre.com/",
       }
+    },
+    {
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+        endpoint: 'https://diazre.us19.list-manage.com/subscribe/post?u=3344b9f1941a28dcd26265a07&amp;id=acdfdaf584',
+      },
     }
   ],
 }

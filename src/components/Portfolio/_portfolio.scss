@@ -8,6 +8,9 @@
     .filler {
       display: none;
     }
+    .name.box-title {
+      text-align: center;
+    }
     @media only screen and (min-width: 768px) {
       grid-template-columns: repeat(2, 50vw);
       grid-template-rows: repeat(2, 1fr);
